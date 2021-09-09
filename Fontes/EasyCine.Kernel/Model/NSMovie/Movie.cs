@@ -38,6 +38,10 @@ namespace EasyCine.Kernel.Model.NSMovie
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>
+		internal static List<Movie> ObterTodos()
+		{
+			return EasyCineContext.Get().MovieSet.ToList();
+		}
 		//<#/keep(implements)#>
 	}
 }
