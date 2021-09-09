@@ -20,6 +20,8 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		[Column("card_number", TypeName = "VARCHAR(16)"),   MaxLength(16),   Required] public String CardNumber { get; set; } 
 		[Column("security_code", TypeName = "VARCHAR(3)"),   MaxLength(3),   Required] public String SecurityCode { get; set; } 
 		[Column("expiration_date", TypeName = "DATETIME"),   Required] public DateTime ExpirationDate { get; set; } 
+		[Column("id_user", TypeName = "BIGINT"), ForeignKey("User")] public long? id_user { get; set; } 
+		public virtual User User { get; set; } 
 
 		public Card() { }
 		//<#keep(constructor)#>

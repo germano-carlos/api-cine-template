@@ -20,6 +20,11 @@ namespace EasyCine.Kernel.Model.NSUser
 		[Column("email", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Email { get; set; } 
 		[Column("password", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Password { get; set; } 
 		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
+		[Column("USERTYPE", TypeName = "INT"), Required] public UserType UserType { get; set; }
+		[Column("ACTIVITYSTATUS", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
+		[Column("transaction_id", TypeName = "BIGINT"), ForeignKey("Transaction")] public long transaction_id { get; set; } 
+		public virtual Transaction Transaction { get; set; } 
+		[InverseProperty("User")] public virtual List<Card> CardList { get; set; }  // ICollection 
 
 		public User() { }
 		//<#keep(constructor)#>

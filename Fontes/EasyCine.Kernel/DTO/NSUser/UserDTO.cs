@@ -13,6 +13,10 @@ namespace EasyCine.Kernel.DTO.NSUser
 		public String Email;
 		public String Password;
 		public DateTime CreatedAt;
+		public UserType UserType;
+		public ActivityStatus ActivityStatus;
+		public TransactionDTO Transaction;
+		public List<CardDTO> CardList = new List<CardDTO>();
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

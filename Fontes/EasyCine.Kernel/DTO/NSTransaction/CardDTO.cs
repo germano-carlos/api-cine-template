@@ -13,6 +13,7 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 		public String CardNumber;
 		public String SecurityCode;
 		public DateTime ExpirationDate;
+		public UserDTO User;
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

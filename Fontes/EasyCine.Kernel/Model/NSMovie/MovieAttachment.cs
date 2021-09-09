@@ -17,6 +17,9 @@ namespace EasyCine.Kernel.Model.NSMovie
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie_attachment", TypeName = "BIGINT")] public long MovieAttachmentId { get; set; } 
 		[Column("ds_url", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Url { get; set; } 
+		[Column("ATTACHMENTTYPE", TypeName = "INT"), Required] public AttachmentType AttachmentType { get; set; }
+		[Column("movie_id", TypeName = "BIGINT"), ForeignKey("Movie")] public long movie_id { get; set; } 
+		public virtual Movie Movie { get; set; } 
 
 		public MovieAttachment() { }
 		//<#keep(constructor)#>

@@ -10,6 +10,8 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 	{
 		public long TransactionId;
 		public DateTime CreatedAt;
+		public TransactionStatus TransactionStatus;
+		public List<ItemDTO> ItemList = new List<ItemDTO>();
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

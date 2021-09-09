@@ -17,6 +17,8 @@ namespace EasyCine.Kernel.Model.NSTransaction
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("transaction_id", TypeName = "BIGINT")] public long TransactionId { get; set; } 
 		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
+		[Column("TRANSACTIONSTATUS", TypeName = "INT"), Required] public TransactionStatus TransactionStatus { get; set; }
+		[InverseProperty("Transaction")] public virtual List<Item> ItemList { get; set; }  // ICollection 
 
 		public Transaction() { }
 		//<#keep(constructor)#>
