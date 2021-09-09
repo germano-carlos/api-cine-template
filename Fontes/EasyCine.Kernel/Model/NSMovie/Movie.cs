@@ -25,9 +25,8 @@ namespace EasyCine.Kernel.Model.NSMovie
 		[Column("end_time", TypeName = "DATETIME"),   Required] public DateTime EndTime { get; set; } 
 		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
 		[Column("id_movie_category", TypeName = "INT"), Required] public MovieCategory MovieCategory { get; set; }
-		[Column("id_movie_session", TypeName = "BIGINT"), ForeignKey("MovieSession")] public long? id_movie_session { get; set; } 
-		public virtual MovieSession MovieSession { get; set; } 
 		[InverseProperty("Movie")] public virtual List<MovieAttachment> MovieAttachmentList { get; set; }  // ICollection 
+		[InverseProperty("Movie")] public virtual List<MovieSession> MovieSessionList { get; set; }  // ICollection 
 
 		public Movie() { }
 		//<#keep(constructor)#>

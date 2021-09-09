@@ -9,6 +9,7 @@ using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using EasyCine.Kernel.Model.NSGeneric;
+using EasyCine.Kernel.Model.NSSession;
 using EasyCine.Kernel.Model.NSTransaction;
 //<#/keep(imports)#>
 
@@ -21,8 +22,11 @@ namespace EasyCine.Kernel.Model.NSMovie
 		[Column("amount", TypeName = "decimal(10, 2)")] public decimal? Amount { get; set; } 
 		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
 		[Column("id_session_type", TypeName = "INT"), Required] public SessionType SessionType { get; set; }
-		[Column("id_transaction", TypeName = "BIGINT"), ForeignKey("Transaction")] public long id_transaction { get; set; } 
-		public virtual Transaction Transaction { get; set; } 
+		[Column("MovieId", TypeName = "BIGINT"), ForeignKey("Movie")] public long MovieId { get; set; } 
+		public virtual Movie Movie { get; set; } 
+		[Column("id_session", TypeName = "INT"), ForeignKey("Session")] public int id_session { get; set; } 
+		public virtual Session Session { get; set; } 
+		[InverseProperty("MovieSession")] public virtual List<Transaction> TransactionList { get; set; }  // ICollection 
 
 		public MovieSession() { }
 		//<#keep(constructor)#>

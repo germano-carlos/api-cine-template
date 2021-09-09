@@ -10,7 +10,6 @@
 		`end_time` DATETIME NOT NULL, 
 		`id_status` INT NOT NULL, 
 		`id_movie_category` INT NOT NULL, 
-		`id_movie_session` BIGINT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_movie`)
 	);
@@ -19,7 +18,7 @@
 		`id_movie_attachment` BIGINT NOT NULL AUTO_INCREMENT, 
 		`ds_url` VARCHAR(255) NOT NULL, 
 		`id_attachment_type` INT NOT NULL, 
-		`id_movie` BIGINT NOT NULL, 
+		`MovieId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_movie_attachment`)
 	);
@@ -29,7 +28,8 @@
 		`amount` NUMERIC(10, 2) NULL, 
 		`id_status` INT NOT NULL, 
 		`id_session_type` INT NOT NULL, 
-		`id_transaction` BIGINT NOT NULL, 
+		`MovieId` BIGINT NOT NULL, 
+		`id_session` INT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_movie_session`)
 	);
@@ -42,7 +42,6 @@
 		`created_at` DATETIME NOT NULL, 
 		`id_status` INT NOT NULL, 
 		`id_user_type` INT NOT NULL, 
-		`id_transaction` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_user`)
 	);
@@ -51,6 +50,8 @@
 		`id_transaction` BIGINT NOT NULL AUTO_INCREMENT, 
 		`created_at` DATETIME NOT NULL, 
 		`id_transaction_status` INT NOT NULL, 
+		`id_movie_session` BIGINT NOT NULL, 
+		`UserId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_transaction`)
 	);
@@ -61,7 +62,7 @@
 		`card_number` VARCHAR(16) NOT NULL, 
 		`security_code` VARCHAR(3) NOT NULL, 
 		`expiration_date` DATETIME NOT NULL, 
-		`id_user` BIGINT NULL, 
+		`UserId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_card`)
 	);
@@ -70,7 +71,7 @@
 		`id_item` BIGINT NOT NULL AUTO_INCREMENT, 
 		`amount` NUMERIC(10, 2) NOT NULL, 
 		`name` VARCHAR(255) NOT NULL, 
-		`id_transaction` BIGINT NOT NULL, 
+		`TransactionId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_item`)
 	);
@@ -80,26 +81,25 @@
 		`session_hour` VARCHAR(8) NOT NULL, 
 		`created_at` DATETIME NOT NULL, 
 		`id_status` INT NOT NULL, 
-		`id_movie_session` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_session`)
 	);
 
 
 
-ALTER TABLE `Movies` ADD CONSTRAINT `FK_Movies_MovieSession` FOREIGN KEY (`id_movie_session`) REFERENCES `MovieSessions` (`id_movie_session`);
-CREATE INDEX IMovies_MovieSession ON `Movies` (`id_movie_session`);
-ALTER TABLE `MovieAttachments` ADD CONSTRAINT `FK_MovieAttachments_Movie` FOREIGN KEY (`id_movie`) REFERENCES `Movies` (`id_movie`);
-CREATE INDEX IMovieAttachments_Movie ON `MovieAttachments` (`id_movie`);
-ALTER TABLE `MovieSessions` ADD CONSTRAINT `FK_MovieSessions_Transaction` FOREIGN KEY (`id_transaction`) REFERENCES `Transactions` (`id_transaction`);
-CREATE INDEX IMovieSessions_Transaction ON `MovieSessions` (`id_transaction`);
-ALTER TABLE `Users` ADD CONSTRAINT `FK_Users_Transaction` FOREIGN KEY (`id_transaction`) REFERENCES `Transactions` (`id_transaction`);
-CREATE INDEX IUsers_Transaction ON `Users` (`id_transaction`);
-ALTER TABLE `Cards` ADD CONSTRAINT `FK_Cards_User` FOREIGN KEY (`id_user`) REFERENCES `Users` (`id_user`);
-CREATE INDEX ICards_User ON `Cards` (`id_user`);
-ALTER TABLE `Itens` ADD CONSTRAINT `FK_Itens_Transaction` FOREIGN KEY (`id_transaction`) REFERENCES `Transactions` (`id_transaction`);
-CREATE INDEX IItens_Transaction ON `Itens` (`id_transaction`);
-ALTER TABLE `Sessions` ADD CONSTRAINT `FK_Sessions_MovieSession` FOREIGN KEY (`id_movie_session`) REFERENCES `MovieSessions` (`id_movie_session`);
-CREATE INDEX ISessions_MovieSession ON `Sessions` (`id_movie_session`);
+ALTER TABLE `MovieAttachments` ADD CONSTRAINT `FK_MovieAttachments_Movie` FOREIGN KEY (`MovieId`) REFERENCES `Movies` (`id_movie`);
+CREATE INDEX IMovieAttachments_Movie ON `MovieAttachments` (`MovieId`);
+ALTER TABLE `MovieSessions` ADD CONSTRAINT `FK_MovieSessions_Movie` FOREIGN KEY (`MovieId`) REFERENCES `Movies` (`id_movie`);
+CREATE INDEX IMovieSessions_Movie ON `MovieSessions` (`MovieId`);
+ALTER TABLE `MovieSessions` ADD CONSTRAINT `FK_MovieSessions_Session` FOREIGN KEY (`id_session`) REFERENCES `Sessions` (`id_session`);
+CREATE INDEX IMovieSessions_Session ON `MovieSessions` (`id_session`);
+ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_MovieSession` FOREIGN KEY (`id_movie_session`) REFERENCES `MovieSessions` (`id_movie_session`);
+CREATE INDEX ITransactions_MovieSession ON `Transactions` (`id_movie_session`);
+ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_User` FOREIGN KEY (`UserId`) REFERENCES `Users` (`id_user`);
+CREATE INDEX ITransactions_User ON `Transactions` (`UserId`);
+ALTER TABLE `Cards` ADD CONSTRAINT `FK_Cards_User` FOREIGN KEY (`UserId`) REFERENCES `Users` (`id_user`);
+CREATE INDEX ICards_User ON `Cards` (`UserId`);
+ALTER TABLE `Itens` ADD CONSTRAINT `FK_Itens_Transaction` FOREIGN KEY (`TransactionId`) REFERENCES `Transactions` (`id_transaction`);
+CREATE INDEX IItens_Transaction ON `Itens` (`TransactionId`);
 
 -- <#keep(end)#><#/keep(end)#>

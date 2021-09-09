@@ -24,9 +24,8 @@ namespace EasyCine.Kernel.Model.NSUser
 		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
 		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
 		[Column("id_user_type", TypeName = "INT"), Required] public UserType UserType { get; set; }
-		[Column("id_transaction", TypeName = "BIGINT"), ForeignKey("Transaction")] public long id_transaction { get; set; } 
-		public virtual Transaction Transaction { get; set; } 
 		[InverseProperty("User")] public virtual List<Card> CardList { get; set; }  // ICollection 
+		[InverseProperty("User")] public virtual List<Transaction> TransactionList { get; set; }  // ICollection 
 
 		public User() { }
 		//<#keep(constructor)#>
