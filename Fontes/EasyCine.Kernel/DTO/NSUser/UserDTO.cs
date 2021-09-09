@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Text;
 //<#/keep(imports)#>
 
-namespace EasyCine.Kernel.DTO.NSSession
+namespace EasyCine.Kernel.DTO.NSUser
 {
-	public class SessionDTO
+	public class UserDTO
 	{
-		public int SessionId;
-		public String SessionHour;
+		public long UserId;
+		public String Name;
+		public String Email;
+		public String Password;
 		public DateTime CreatedAt;
 
 		//<#keep(implements)#>

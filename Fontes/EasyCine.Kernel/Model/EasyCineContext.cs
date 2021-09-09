@@ -37,6 +37,14 @@ namespace EasyCine.Kernel.Model
 			return _instance.Value = new EasyCineContext(titulo, detalhes);
 		}
 		
+		public DbSet<Movie> MovieSet { get; set; }
+		public DbSet<MovieAttachment> MovieAttachmentSet { get; set; }
+		public DbSet<MovieSession> MovieSessionSet { get; set; }
+		public DbSet<User> UserSet { get; set; }
+		public DbSet<Transaction> TransactionSet { get; set; }
+		public DbSet<Card> CardSet { get; set; }
+		public DbSet<Item> ItemSet { get; set; }
+		public DbSet<Session> SessionSet { get; set; }
 		
 		private EasyCineContext(string titulo) 
 		{ 

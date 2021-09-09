@@ -10,21 +10,22 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 //<#/keep(imports)#>
 
-namespace EasyCine.Kernel.Model.NSMovie
+namespace EasyCine.Kernel.Model.NSTransaction
 {
-	[Table("MovieAttachments")]
-	public class MovieAttachment
+	[Table("Itens")]
+	public class Item
 	{
-		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie_attachment", TypeName = "BIGINT")] public long MovieAttachmentId { get; set; } 
-		[Column("ds_url", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Url { get; set; } 
+		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_item", TypeName = "BIGINT")] public long ItemId { get; set; } 
+		[Column("amount", TypeName = "decimal(10, 2)"),   Required] public decimal Amount { get; set; } 
+		[Column("name", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Name { get; set; } 
 
-		public MovieAttachment() { }
+		public Item() { }
 		//<#keep(constructor)#>
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
 			//<#keep(delete)#>
-			EasyCineContext.Get().MovieAttachmentSet.Remove(this);
+			EasyCineContext.Get().ItemSet.Remove(this);
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>

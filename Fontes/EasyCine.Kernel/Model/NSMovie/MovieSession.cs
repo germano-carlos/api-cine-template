@@ -12,19 +12,19 @@ using System.Text;
 
 namespace EasyCine.Kernel.Model.NSMovie
 {
-	[Table("MovieAttachments")]
-	public class MovieAttachment
+	[Table("MovieSessions")]
+	public class MovieSession
 	{
-		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie_attachment", TypeName = "BIGINT")] public long MovieAttachmentId { get; set; } 
-		[Column("ds_url", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Url { get; set; } 
+		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie_session", TypeName = "BIGINT")] public long MovieSessionId { get; set; } 
+		[Column("amount", TypeName = "decimal(10, 2)")] public decimal? Amount { get; set; } 
 
-		public MovieAttachment() { }
+		public MovieSession() { }
 		//<#keep(constructor)#>
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
 			//<#keep(delete)#>
-			EasyCineContext.Get().MovieAttachmentSet.Remove(this);
+			EasyCineContext.Get().MovieSessionSet.Remove(this);
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>

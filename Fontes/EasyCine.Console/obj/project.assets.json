@@ -9818,11 +9818,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
+      "projectUniqueName": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
       "projectName": "EasyCine.Console",
-      "projectPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
+      "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Console\\obj\\",
+      "outputPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9840,8 +9840,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
-              "projectPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj"
+            "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
+              "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj"
             }
           }
         }

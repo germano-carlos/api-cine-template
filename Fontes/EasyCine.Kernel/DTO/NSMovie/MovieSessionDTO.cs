@@ -10,8 +10,6 @@ namespace EasyCine.Kernel.DTO.NSMovie
 	{
 		public long MovieSessionId;
 		public decimal? Amount;
-		public SessionType SessionType;
-		public ActivityStatus ActivityStatus;
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

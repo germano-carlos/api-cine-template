@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using System.Text;
 //<#/keep(imports)#>
 
-namespace EasyCine.Kernel.DTO.NSSession
+namespace EasyCine.Kernel.DTO.NSTransaction
 {
-	public class SessionDTO
+	public class TransactionDTO
 	{
-		public int SessionId;
-		public String SessionHour;
+		public long TransactionId;
 		public DateTime CreatedAt;
 
 		//<#keep(implements)#>

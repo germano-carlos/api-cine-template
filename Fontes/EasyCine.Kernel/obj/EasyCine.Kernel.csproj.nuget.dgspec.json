@@ -1,82 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj": {}
+    "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {}
   },
   "projects": {
-    "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
-        "projectName": "EasyCine.Console",
-        "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
-        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/cmtecnologia/auth/f65b0375-9674-41e2-81f1-3024fedead90/api/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
-                "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "CMUtil": {
-              "target": "Package",
-              "version": "[1.2007.814.5423, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "log4net": {
-              "target": "Package",
-              "version": "[2.0.8, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
       "version": "1.0.0",
       "restore": {

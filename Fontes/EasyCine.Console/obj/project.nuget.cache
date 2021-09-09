@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NMcNfQhODchkuoTT1lCy1RjXaQtSCgu3xqFMTCtlyX+9d2xRlhrGa0FKsWYu4FDXzJcDGL61Zjirk45/SeRw4g==",
+  "dgSpecHash": "qbz3Roy21avE3uSAqv6T2tIy5PedwxK0vQjAAnh0vWWFtTrc5z5f3Pg6C50XMPoZsRwkOpsV7haUjaELFBq4rg==",
   "success": false,
-  "projectFilePath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
+  "projectFilePath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\amazon.lambda.core\\2.0.0\\amazon.lambda.core.2.0.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\awssdk.core\\3.7.0.34\\awssdk.core.3.7.0.34.nupkg.sha512",

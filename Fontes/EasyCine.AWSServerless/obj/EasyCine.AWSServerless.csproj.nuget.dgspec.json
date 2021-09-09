@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj": {}
+    "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj": {}
   },
   "projects": {
-    "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj": {
+    "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj",
+        "projectUniqueName": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj",
         "projectName": "EasyCine.AWSServerless",
-        "projectPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj",
+        "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj",
         "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.AWSServerless\\obj\\",
+        "outputPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.AWSServerless\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
-                "projectPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj"
+              "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
+                "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj"
               }
             }
           }
@@ -92,14 +92,14 @@
         }
       }
     },
-    "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
+    "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj",
+        "projectUniqueName": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj",
         "projectName": "EasyCine.Kernel",
-        "projectPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj",
+        "projectPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\EasyCine.Kernel.csproj",
         "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\www\\work\\EasyCine\\Fontes\\EasyCine.Kernel\\obj\\",
+        "outputPath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Kernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",

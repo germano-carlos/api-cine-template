@@ -10,8 +10,7 @@ namespace EasyCine.Kernel.DTO.NSMovie
 	public class MovieAttachmentDTO
 	{
 		public long MovieAttachmentId;
-		public int Url;
-		public AttachmentType AttachmentType;
+		public String Url;
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>
