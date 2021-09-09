@@ -43,12 +43,12 @@ namespace EasyCine.AWSServerless
 					Version = "v1",
 					Title = "CM EasyCine",
 					Description = "API para EasyCine",
-					Contact = new OpenApiContact() { Name = "Fernando Soares", Email = "fernando@cmtecnologia.com.br", Url = new Uri("https://cmtecnologia.com.br") }
+					Contact = new OpenApiContact() { Name = "Carlos Germano", Email = "germano.carlos2712@gmail.com" }
 				});
 				
-				c.AddSecurityDefinition("CMAuthToken", new OpenApiSecurityScheme
+				c.AddSecurityDefinition("AuthToken", new OpenApiSecurityScheme
 				{
-					Name = "CMAuthToken",
+					Name = "AuthToken",
 					In = ParameterLocation.Header,
 					Type = SecuritySchemeType.ApiKey
 				});
@@ -60,7 +60,7 @@ namespace EasyCine.AWSServerless
 						{
 							Reference = new OpenApiReference
 							{
-								Id = "CMAuthToken",
+								Id = "AuthToken",
 								Type = ReferenceType.SecurityScheme
 							}
 						},
