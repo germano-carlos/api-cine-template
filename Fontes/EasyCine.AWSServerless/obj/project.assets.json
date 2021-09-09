@@ -2362,7 +2362,10 @@
         },
         "runtime": {
           "bin/placeholder/EasyCine.Kernel.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

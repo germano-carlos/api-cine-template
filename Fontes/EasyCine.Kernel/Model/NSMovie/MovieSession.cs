@@ -19,9 +19,9 @@ namespace EasyCine.Kernel.Model.NSMovie
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie_session", TypeName = "BIGINT")] public long MovieSessionId { get; set; } 
 		[Column("amount", TypeName = "decimal(10, 2)")] public decimal? Amount { get; set; } 
-		[Column("ACTIVITYSTATUS", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
-		[Column("SESSIONTYPE", TypeName = "INT"), Required] public SessionType SessionType { get; set; }
-		[Column("transaction_id", TypeName = "BIGINT"), ForeignKey("Transaction")] public long transaction_id { get; set; } 
+		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
+		[Column("id_session_type", TypeName = "INT"), Required] public SessionType SessionType { get; set; }
+		[Column("id_transaction", TypeName = "BIGINT"), ForeignKey("Transaction")] public long id_transaction { get; set; } 
 		public virtual Transaction Transaction { get; set; } 
 
 		public MovieSession() { }

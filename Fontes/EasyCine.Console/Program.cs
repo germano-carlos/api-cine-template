@@ -14,6 +14,7 @@ namespace EasyCine.Console
     {
         static void Main(string[] args)
         {
+			System.Console.Read();
         }
 		public delegate void F();
 		public static void Run(F f, string mensagem)

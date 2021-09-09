@@ -32,7 +32,6 @@ C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
@@ -69,3 +68,4 @@ C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\obj\Debug\netcoreapp3.1
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\obj\Debug\netcoreapp3.1\EasyCine.Console.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\obj\Debug\netcoreapp3.1\EasyCine.Console.pdb
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\obj\Debug\netcoreapp3.1\EasyCine.Console.genruntimeconfig.cache
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Console\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
