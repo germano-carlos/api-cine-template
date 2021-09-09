@@ -24,6 +24,5 @@
     <PkgNSwag_MSBuild Condition=" '$(PkgNSwag_MSBuild)' == '' ">C:\Users\carlo\.nuget\packages\nswag.msbuild\12.0.4</PkgNSwag_MSBuild>
     <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\carlo\.nuget\packages\awssdk.core\3.7.0.34</PkgAWSSDK_Core>
     <PkgAWSSDK_Lambda Condition=" '$(PkgAWSSDK_Lambda)' == '' ">C:\Users\carlo\.nuget\packages\awssdk.lambda\3.7.0.32</PkgAWSSDK_Lambda>
-    <PkgAWSSDK_DynamoDBv2 Condition=" '$(PkgAWSSDK_DynamoDBv2)' == '' ">C:\Users\carlo\.nuget\packages\awssdk.dynamodbv2\3.7.0.30</PkgAWSSDK_DynamoDBv2>
   </PropertyGroup>
 </Project>

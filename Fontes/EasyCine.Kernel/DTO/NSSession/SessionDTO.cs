@@ -1,4 +1,6 @@
 //<#keep(imports)#>
+using EasyCine.Kernel.DTO.NSMovie;
+using EasyCine.Kernel.Model.NSGeneric;
 using System;
 using System.Collections.Generic;
 using System.Text;

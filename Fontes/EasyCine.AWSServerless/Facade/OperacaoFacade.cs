@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using EasyCine.Kernel;
-using CMUtil.Logger;
 //<#/keep(imports)#>
 
 namespace EasyCine.AWSServerless.Facade

@@ -1,4 +1,5 @@
 //<#keep(imports)#>
+using EasyCine.Kernel.DTO.NSUser;
 using System;
 using System.Collections.Generic;
 using System.Text;

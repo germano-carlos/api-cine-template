@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using EasyCine.Kernel;
-using CMUtil.Logger;
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Controllers

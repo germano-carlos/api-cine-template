@@ -20,7 +20,6 @@ namespace EasyCine.AWSServerless
 		public IConfiguration Configuration { get; }
 		public Startup(IConfiguration configuration)
 		{
-			CMUtil.Configuracao.Config.Registry(new CMUtil.Configuracao.AppConfig());
 			Configuration = configuration;
 		}
 

@@ -1,0 +1,10 @@
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.csproj.AssemblyReference.cache
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.AssemblyInfoInputs.cache
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.AssemblyInfo.cs
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.csproj.CoreCompileInputs.cache
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\bin\Debug\netcoreapp3.1\EasyCine.Kernel.deps.json
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\bin\Debug\netcoreapp3.1\EasyCine.Kernel.dll
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\bin\Debug\netcoreapp3.1\EasyCine.Kernel.pdb
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.dll
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.pdb

@@ -7,10 +7,12 @@ using Microsoft.EntityFrameworkCore.Design;
 using System;
 using System.Diagnostics;
 using Microsoft.Extensions.Logging;
-using CMUtil.Configuracao;
-using CMUtil.Logger;
-using CMUtil;
 using System.Diagnostics;
+using EasyCine.Kernel.Model.NSMovie;
+using EasyCine.Kernel.Model.NSUser;
+using EasyCine.Kernel.Model.NSTransaction;
+using EasyCine.Kernel.Model.NSSession;
+using EasyCine.Kernel.Util;
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Model
@@ -48,12 +50,10 @@ namespace EasyCine.Kernel.Model
 		
 		private EasyCineContext(string titulo) 
 		{ 
-			Performance.Start(titulo); 
 			//<#keep(criacao)#><#/keep(criacao)#>
 		}
 		private EasyCineContext(string titulo, string detalhes)
 		{
-			Performance.Start(titulo, detalhes);
 			//<#keep(criacao2)#><#/keep(criacao2)#>
 		}
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -107,8 +107,6 @@ namespace EasyCine.Kernel.Model
 		{
 			base.Dispose();
 			_instance.Value = null;
-			CMAuth.SetLogado(null);
-			Performance.Stop();
 			//<#keep(dispose)#><#/keep(dispose)#>
 		}
 		//<#keep(end)#><#/keep(end)#>

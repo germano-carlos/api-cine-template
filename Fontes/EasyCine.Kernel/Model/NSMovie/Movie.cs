@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.Model.NSGeneric;
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Model.NSMovie
