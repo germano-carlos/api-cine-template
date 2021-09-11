@@ -50,7 +50,7 @@
 		`id_transaction` BIGINT NOT NULL AUTO_INCREMENT, 
 		`created_at` DATETIME NOT NULL, 
 		`id_transaction_status` INT NOT NULL, 
-		`id_movie_session` BIGINT NOT NULL, 
+		`MovieSessionId` BIGINT NOT NULL, 
 		`UserId` BIGINT NOT NULL, 
 		`CardId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
@@ -95,8 +95,8 @@ ALTER TABLE `MovieSessions` ADD CONSTRAINT `FK_MovieSessions_Movie` FOREIGN KEY 
 CREATE INDEX IMovieSessions_Movie ON `MovieSessions` (`MovieId`);
 ALTER TABLE `MovieSessions` ADD CONSTRAINT `FK_MovieSessions_Session` FOREIGN KEY (`id_session`) REFERENCES `Sessions` (`id_session`);
 CREATE INDEX IMovieSessions_Session ON `MovieSessions` (`id_session`);
-ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_MovieSession` FOREIGN KEY (`id_movie_session`) REFERENCES `MovieSessions` (`id_movie_session`);
-CREATE INDEX ITransactions_MovieSession ON `Transactions` (`id_movie_session`);
+ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_MovieSession` FOREIGN KEY (`MovieSessionId`) REFERENCES `MovieSessions` (`id_movie_session`);
+CREATE INDEX ITransactions_MovieSession ON `Transactions` (`MovieSessionId`);
 ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_User` FOREIGN KEY (`UserId`) REFERENCES `Users` (`id_user`);
 CREATE INDEX ITransactions_User ON `Transactions` (`UserId`);
 ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_Card` FOREIGN KEY (`CardId`) REFERENCES `Cards` (`id_card`);
