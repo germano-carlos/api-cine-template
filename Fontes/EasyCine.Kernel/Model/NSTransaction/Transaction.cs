@@ -25,6 +25,8 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		public virtual MovieSession MovieSession { get; set; } 
 		[Column("UserId", TypeName = "BIGINT"), ForeignKey("User")] public long UserId { get; set; } 
 		public virtual User User { get; set; } 
+		[Column("CardId", TypeName = "BIGINT"), ForeignKey("Card")] public long CardId { get; set; } 
+		public virtual Card Card { get; set; } 
 		[InverseProperty("Transaction")] public virtual List<Item> ItemList { get; set; }  // ICollection 
 
 		public Transaction() { }

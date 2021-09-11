@@ -18,7 +18,7 @@ namespace EasyCine.Kernel.Controllers
 		}
 		
 		
-		public void FuncaoTeste(int a, string b) 
+		public List<Movie> FuncaoTeste(int a, string b) 
 		{ 
 			using (var context = EasyCineContext.Get("Operacao.FuncaoTeste")) 
 			{ 
@@ -26,7 +26,7 @@ namespace EasyCine.Kernel.Controllers
 				context.SaveChanges(); 
 				//<#/keep(FuncaoTeste)#> 
 			} 
-		}
+		} 
 
 		//<#keep(implementation)#><#/keep(implementation)#>
 	}

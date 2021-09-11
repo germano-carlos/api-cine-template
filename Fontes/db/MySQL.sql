@@ -40,8 +40,8 @@
 		`email` VARCHAR(255) NOT NULL, 
 		`password` VARCHAR(255) NOT NULL, 
 		`created_at` DATETIME NOT NULL, 
-		`id_status` INT NOT NULL, 
 		`id_user_type` INT NOT NULL, 
+		`id_status` INT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_user`)
 	);
@@ -52,6 +52,7 @@
 		`id_transaction_status` INT NOT NULL, 
 		`id_movie_session` BIGINT NOT NULL, 
 		`UserId` BIGINT NOT NULL, 
+		`CardId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_transaction`)
 	);
@@ -71,6 +72,7 @@
 		`id_item` BIGINT NOT NULL AUTO_INCREMENT, 
 		`amount` NUMERIC(10, 2) NOT NULL, 
 		`name` VARCHAR(255) NOT NULL, 
+		`seat` VARCHAR(3) NOT NULL, 
 		`TransactionId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_item`)
@@ -97,6 +99,8 @@ ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_MovieSession` FOREIGN
 CREATE INDEX ITransactions_MovieSession ON `Transactions` (`id_movie_session`);
 ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_User` FOREIGN KEY (`UserId`) REFERENCES `Users` (`id_user`);
 CREATE INDEX ITransactions_User ON `Transactions` (`UserId`);
+ALTER TABLE `Transactions` ADD CONSTRAINT `FK_Transactions_Card` FOREIGN KEY (`CardId`) REFERENCES `Cards` (`id_card`);
+CREATE INDEX ITransactions_Card ON `Transactions` (`CardId`);
 ALTER TABLE `Cards` ADD CONSTRAINT `FK_Cards_User` FOREIGN KEY (`UserId`) REFERENCES `Users` (`id_user`);
 CREATE INDEX ICards_User ON `Cards` (`UserId`);
 ALTER TABLE `Itens` ADD CONSTRAINT `FK_Itens_Transaction` FOREIGN KEY (`TransactionId`) REFERENCES `Transactions` (`id_transaction`);

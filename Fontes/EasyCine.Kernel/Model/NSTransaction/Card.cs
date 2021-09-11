@@ -23,6 +23,7 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		[Column("expiration_date", TypeName = "DATETIME"),   Required] public DateTime ExpirationDate { get; set; } 
 		[Column("UserId", TypeName = "BIGINT"), ForeignKey("User")] public long UserId { get; set; } 
 		public virtual User User { get; set; } 
+		[InverseProperty("Card")] public virtual List<Transaction> TransactionList { get; set; }  // ICollection 
 
 		public Card() { }
 		//<#keep(constructor)#>

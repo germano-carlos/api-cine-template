@@ -18,6 +18,7 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_item", TypeName = "BIGINT")] public long ItemId { get; set; } 
 		[Column("amount", TypeName = "decimal(10, 2)"),   Required] public decimal Amount { get; set; } 
 		[Column("name", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Name { get; set; } 
+		[Column("seat", TypeName = "VARCHAR(3)"),   MaxLength(3),   Required] public String Seat { get; set; } 
 		[Column("TransactionId", TypeName = "BIGINT"), ForeignKey("Transaction")] public long TransactionId { get; set; } 
 		public virtual Transaction Transaction { get; set; } 
 
