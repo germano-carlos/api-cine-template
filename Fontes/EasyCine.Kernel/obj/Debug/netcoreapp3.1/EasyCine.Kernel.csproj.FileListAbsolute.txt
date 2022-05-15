@@ -8,3 +8,4 @@ C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\bin\Debug\netcoreapp3.1\
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\bin\Debug\netcoreapp3.1\EasyCine.Kernel.pdb
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.pdb
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\obj\Debug\netcoreapp3.1\EasyCine.Kernel.csproj.CopyComplete

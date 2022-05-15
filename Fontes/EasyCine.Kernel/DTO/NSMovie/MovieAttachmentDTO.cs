@@ -23,8 +23,7 @@ namespace EasyCine.Kernel.DTO.NSMovie
 			{
 				MovieAttachmentId = element.MovieAttachmentId, 
 				Url = element.Url, 
-				AttachmentType = element.AttachmentType, 
-				Movie = MovieDTO.FromEntity(element.Movie), 
+				AttachmentType = element.AttachmentType,
 			};
 		}
 

@@ -1,6 +1,7 @@
 //<#keep(imports)#>
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSMovie;
@@ -36,10 +37,15 @@ namespace EasyCine.Kernel.DTO.NSMovie
 				StartTime = movie.StartTime,
 				EndTime = movie.EndTime,
 				ActivityStatus = movie.ActivityStatus,
-				/*MovieAttachmentList = MovieAttachmentDTO.FromEntity(),
-				MovieSessionList = MovieSessionDTO.FromEntity(),
-				MovieCategoryList = MovieCategoryDTO.FromEntity(),*/
+				MovieAttachmentList = MovieAttachmentDTO.FromEntity(movie.MovieAttachmentList),
+				MovieSessionList = MovieSessionDTO.FromEntity(movie.MovieSessionList),
+				MovieCategoryList = MovieCategoryDTO.FromEntity(movie.MovieCategoryList)
 			};
+		}
+		
+		public static List<MovieDTO> FromEntity(List<Movie> movies)
+		{
+			return new List<MovieDTO>(movies.Select(FromEntity));
 		}
 		//<#/keep(implements)#>
 	}

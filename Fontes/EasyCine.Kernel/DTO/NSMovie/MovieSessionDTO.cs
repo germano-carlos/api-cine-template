@@ -4,6 +4,7 @@ using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSMovie;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using EasyCine.Kernel.DTO.NSSession;
 
@@ -22,6 +23,23 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		public List<TransactionDTO> TransactionList = new List<TransactionDTO>();
 
 		//<#keep(implements)#>
+		public static MovieSessionDTO FromEntity(MovieSession element)
+		{
+			return new MovieSessionDTO()
+			{
+				MovieSessionId = element.MovieSessionId, 
+				Amount = element.Amount, 
+				ActivityStatus = element.ActivityStatus, 
+				SessionType = element.SessionType,
+				Session = SessionDTO.FromEntity(element.Session), 
+				TransactionList = TransactionDTO.FromEntity(element.TransactionList)
+			};
+		}
+		
+		public static List<MovieSessionDTO> FromEntity(List<MovieSession> elements)
+		{
+			return new List<MovieSessionDTO>(elements.Select(FromEntity));
+		}
 		//<#/keep(implements)#>
 	}
 }

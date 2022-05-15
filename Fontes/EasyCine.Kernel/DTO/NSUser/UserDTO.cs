@@ -4,6 +4,7 @@ using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSUser;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 //<#/keep(imports)#>
 
@@ -22,6 +23,25 @@ namespace EasyCine.Kernel.DTO.NSUser
 		public List<TransactionDTO> TransactionList = new List<TransactionDTO>();
 
 		//<#keep(implements)#>
+		public static UserDTO FromEntity(User element)
+		{
+			return new UserDTO()
+			{
+				UserId = element.UserId,
+				Name = element.Name,
+				Email = element.Email,
+				Password = element.Password,
+				CreatedAt = element.CreatedAt,
+				UserType = element.UserType,
+				ActivityStatus = element.ActivityStatus,
+				CardList = CardDTO.FromEntity(element.CardList),
+			};
+		}
+		
+		public static List<UserDTO> FromEntity(List<User> elements)
+		{
+			return new List<UserDTO>(elements.Select(FromEntity));
+		}
 		//<#/keep(implements)#>
 	}
 }
