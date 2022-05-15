@@ -57,7 +57,7 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		public void Inativar()
 		{
 			if (ActivityStatus == ActivityStatus.INACTIVE)
-				return;
+				throw new Exception("Card Already Inactive");
 
 			ActivityStatus = ActivityStatus.INACTIVE;
 		}
