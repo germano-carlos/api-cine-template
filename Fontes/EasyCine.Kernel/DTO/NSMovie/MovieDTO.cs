@@ -24,6 +24,23 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		public List<MovieCategoryDTO> MovieCategoryList = new List<MovieCategoryDTO>();
 
 		//<#keep(implements)#>
+		public static MovieDTO FromEntity(Movie movie)
+		{
+			return new MovieDTO()
+			{
+				MovieId = movie.MovieId,
+				Name = movie.Name,
+				Description = movie.Description,
+				Rating = movie.Rating,
+				CreatedAt = movie.CreatedAt,
+				StartTime = movie.StartTime,
+				EndTime = movie.EndTime,
+				ActivityStatus = movie.ActivityStatus,
+				/*MovieAttachmentList = MovieAttachmentDTO.FromEntity(),
+				MovieSessionList = MovieSessionDTO.FromEntity(),
+				MovieCategoryList = MovieCategoryDTO.FromEntity(),*/
+			};
+		}
 		//<#/keep(implements)#>
 	}
 }
