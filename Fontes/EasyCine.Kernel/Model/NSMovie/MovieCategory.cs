@@ -23,6 +23,13 @@ namespace EasyCine.Kernel.Model.NSMovie
 
 		public MovieCategory() { }
 		//<#keep(constructor)#>
+		public MovieCategory(Category category, Movie movie)
+		{
+			Movie = movie;
+			Category = category;
+
+			EasyCineContext.Get().MovieCategorySet.Add(this);
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{

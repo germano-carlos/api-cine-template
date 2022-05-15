@@ -47,6 +47,11 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		{
 			return new List<MovieDTO>(movies.Select(FromEntity));
 		}
+		
+		public static MovieDTO[] FromEntity(Movie[] movies)
+		{
+			return new List<MovieDTO>(movies.Select(FromEntity)).ToArray();
+		}
 		//<#/keep(implements)#>
 	}
 }

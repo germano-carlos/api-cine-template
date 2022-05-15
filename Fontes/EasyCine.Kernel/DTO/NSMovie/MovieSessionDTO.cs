@@ -40,6 +40,11 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		{
 			return new List<MovieSessionDTO>(elements.Select(FromEntity));
 		}
+		
+		public static MovieSessionDTO[] FromEntity(MovieSession[] elements)
+		{
+			return new List<MovieSessionDTO>(elements.Select(FromEntity)).ToArray();
+		}
 		//<#/keep(implements)#>
 	}
 }

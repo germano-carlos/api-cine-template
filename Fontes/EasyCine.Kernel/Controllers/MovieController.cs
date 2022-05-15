@@ -20,7 +20,7 @@ namespace EasyCine.Kernel.Controllers
 		}
 		
 		
-		public Movie AtualizarFilme(MovieDTO movie) 
+		public MovieDTO AtualizarFilme(MovieDTO movie) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.AtualizarFilme"); 
 			//<#keep(AtualizarFilme)#> 
@@ -28,11 +28,11 @@ namespace EasyCine.Kernel.Controllers
 			movieGet.Atualizar(movie);
 			context.SaveChanges(); 
 
-			return movieGet; 
+			return MovieDTO.FromEntity(movieGet); 
 			//<#/keep(AtualizarFilme)#> 
 		} 
 
-		public MovieSession AtualizarSessaoFilme(MovieSessionDTO movieSession) 
+		public MovieSessionDTO AtualizarSessaoFilme(MovieSessionDTO movieSession) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.AtualizarSessaoFilme"); 
 			//<#keep(AtualizarSessaoFilme)#> 
@@ -49,22 +49,22 @@ namespace EasyCine.Kernel.Controllers
 			session.Atualizar(movieSession);
 			context.SaveChanges(); 
 
-			return session; 
+			return MovieSessionDTO.FromEntity(session); 
 			//<#/keep(AtualizarSessaoFilme)#> 
 		} 
 
-		public Movie CriarFilme(MovieDTO movie) 
+		public MovieDTO CriarFilme(MovieDTO movie) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.CriarFilme"); 
 			//<#keep(CriarFilme)#> 
 			var movieCriado = new Movie(movie);
 			context.SaveChanges(); 
 
-			return movieCriado; 
+			return MovieDTO.FromEntity(movieCriado); 
 			//<#/keep(CriarFilme)#> 
 		} 
 
-		public Session CriarSessao(SessionDTO sessao) 
+		public SessionDTO CriarSessao(SessionDTO sessao) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.CriarSessao"); 
 			//<#keep(CriarSessao)#> 
@@ -75,37 +75,39 @@ namespace EasyCine.Kernel.Controllers
 			var session = new Session(sessao);
 			context.SaveChanges(); 
 
-			return session; 
+			return SessionDTO.FromEntity(session); 
 			//<#/keep(CriarSessao)#> 
 		} 
 
-		public MovieSession CriarSessaoFilme(MovieSessionDTO movieSession) 
+		public MovieSessionDTO CriarSessaoFilme(MovieSessionDTO movieSession) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.CriarSessaoFilme"); 
 			//<#keep(CriarSessaoFilme)#> 
 
 			var movie = Movie.Get(movieSession.Movie.MovieId);
+			var sessao = Session.Get(movieSession.Session.SessionHour);
 			if (movie is null)
 				throw new Exception("Movie not found, try again with another values");
-
-			//TODO: Incluir os parametros para criaacao
-			var newSession = new MovieSession();
+			if (sessao is null)
+				throw new Exception("Session not found, try again with another values");
+			
+			var newSession = new MovieSession(movieSession, sessao, movie);
 			movie.MovieSessionList.Add(newSession);
 			
 			context.SaveChanges(); 
-			return newSession; 
+			return MovieSessionDTO.FromEntity(newSession); 
 			//<#/keep(CriarSessaoFilme)#> 
 		} 
 
-		public Movie[] ListarFilmes(String Name, String Description, String Rating, DateTime? CreatedAt, DateTime? StartTime, DateTime? EndTime, ActivityStatus ActivityStatus) 
+		public MovieDTO[] ListarFilmes(String Name, String Description, String Rating, DateTime? CreatedAt, DateTime? StartTime, DateTime? EndTime, ActivityStatus ActivityStatus) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.ListarFilmes"); 
 			//<#keep(ListarFilmes)#> 
-			return Movie.Listar(Name, Description, Rating, CreatedAt, StartTime, EndTime, ActivityStatus); 
+			return MovieDTO.FromEntity(Movie.Listar(Name, Description, Rating, CreatedAt, StartTime, EndTime, ActivityStatus)); 
 			//<#/keep(ListarFilmes)#> 
 		} 
 
-		public MovieSession[] ListarSessoesFilme(int movieId) 
+		public MovieSessionDTO[] ListarSessoesFilme(int movieId) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.ListarSessoesFilme"); 
 			//<#keep(ListarSessoesFilme)#> 
@@ -114,7 +116,7 @@ namespace EasyCine.Kernel.Controllers
 			if (movieGet is null)
 				throw new Exception("Movie not found, try again with another values");
 
-			return movieGet.MovieSessionList.ToArray(); 
+			return MovieSessionDTO.FromEntity(movieGet.MovieSessionList.ToArray()); 
 			//<#/keep(ListarSessoesFilme)#> 
 		} 
 

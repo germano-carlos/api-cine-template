@@ -31,6 +31,14 @@ namespace EasyCine.Kernel.Model.NSMovie
 
 		public MovieSession() { }
 		//<#keep(constructor)#>
+		public MovieSession(MovieSessionDTO parameters, Session session, Movie movie)
+		{
+			Atualizar(parameters);
+			Movie = movie;
+			Session = session;
+
+			EasyCineContext.Get().MovieSessionSet.Add(this);
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
@@ -44,14 +52,15 @@ namespace EasyCine.Kernel.Model.NSMovie
 			Amount = movieSession.Amount ?? Amount;
 			ActivityStatus = movieSession.ActivityStatus;
 			SessionType = movieSession.SessionType;
-			
-			// TODO: Validar se muda a sessão
+
+			if (movieSession.Session != null || movieSession.Movie != null)
+				throw new Exception("It is not possibile to do this operation, please create another movie to do this !");
 		}
 
 		public void Inativar()
 		{
 			if(ActivityStatus == ActivityStatus.INACTIVE)
-				return;
+				throw new Exception("MovieSession Already Inactive");
 
 			ActivityStatus = ActivityStatus.INACTIVE;
 		}

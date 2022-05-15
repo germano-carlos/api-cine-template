@@ -8,6 +8,8 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSMovie;
+
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Model.NSMovie
@@ -23,6 +25,14 @@ namespace EasyCine.Kernel.Model.NSMovie
 
 		public MovieAttachment() { }
 		//<#keep(constructor)#>
+		public MovieAttachment(MovieAttachmentDTO detais, Movie movie)
+		{
+			Url = detais.Url;
+			AttachmentType = detais.AttachmentType;
+			Movie = movie;
+
+			EasyCineContext.Get().MovieAttachmentSet.Add(this);
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{

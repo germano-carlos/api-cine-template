@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.Model.NSGeneric;
+using EasyCine.Kernel.Model.NSSession;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 //<#/keep(imports)#>
@@ -40,13 +41,18 @@ namespace EasyCine.Kernel.Model.NSMovie
 			CreatedAt = DateTime.Now; 
 		 	ActivityStatus = ActivityStatus.ACTIVE;
 		    
-		    // TODO: Criar os construtores !
 		    foreach (var movieAttachmentElement in movieP.MovieAttachmentList)
-			    new MovieAttachment();
-		    foreach (var movieSessionElement in movieP.MovieSessionList)
-			    new MovieSession();
+			    new MovieAttachment(movieAttachmentElement, this);
 		    foreach (var movieCategoryElement in movieP.MovieCategoryList)
-			    new MovieCategory();
+			    new MovieCategory(movieCategoryElement.Category, this);
+		    foreach (var movieSessionElement in movieP.MovieSessionList)
+		    {
+			    var session = Session.Get(movieSessionElement.Session.SessionHour);
+			    if (session is null)
+				    throw new Exception("It was not possibile create the filme, because the sessionHour is invalid !");
+			    
+			    new MovieSession(movieSessionElement, session, this);
+		    }
 		}
 		//<#/keep(constructor)#>
 		internal void Delete()
@@ -95,6 +101,9 @@ namespace EasyCine.Kernel.Model.NSMovie
 
 		public void Inativar()
 		{
+			if (ActivityStatus == ActivityStatus.INACTIVE)
+				throw new Exception("Movie Already Inactive");
+			
 			MovieSessionList.ForEach(m => m.Inativar());
 			ActivityStatus = ActivityStatus.INACTIVE;
 		}

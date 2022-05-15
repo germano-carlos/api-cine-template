@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using EasyCine.Kernel.Controllers;
 using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.DTO.NSTransaction;
@@ -11,6 +12,13 @@ namespace EasyCine.Tests;
 
 public class MovieTests
 {
+
+    private readonly MovieController _controller; 
+    public MovieTests()
+    {
+        _controller = new MovieController();
+    }
+    
     [Theory]
     [InlineData(-1)]
     [InlineData(1)] // Gera erro !
@@ -44,8 +52,11 @@ public class MovieTests
             Rating = "10.0"
         };
 
-        //var result = new MovieController().CriarFilme(MovieDTO.FromEntity(movie));
+        var result = new MovieController().CriarFilme(MovieDTO.FromEntity(movie));
+        var r2 = new MovieController().CriarFilme(MovieDTO.FromEntity(movie));
+        //var obter = new MovieController().ListarFilmes(null, null, null, null, null, null, ActivityStatus.ACTIVE);
         
-        Assert.Equal(new {ob = "teste"}, new {ob = "teste"});
+        
+        Assert.Equal(r2, result);
     }
 }
