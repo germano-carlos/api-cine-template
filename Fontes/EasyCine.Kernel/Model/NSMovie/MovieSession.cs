@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSSession;
 using EasyCine.Kernel.Model.NSTransaction;
@@ -38,6 +39,22 @@ namespace EasyCine.Kernel.Model.NSMovie
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>
+		public void Atualizar(MovieSessionDTO movieSession)
+		{
+			Amount = movieSession.Amount ?? Amount;
+			ActivityStatus = movieSession.ActivityStatus;
+			SessionType = movieSession.SessionType;
+			
+			// TODO: Validar se muda a sessão
+		}
+
+		public void Inativar()
+		{
+			if(ActivityStatus == ActivityStatus.INACTIVE)
+				return;
+
+			ActivityStatus = ActivityStatus.INACTIVE;
+		}
 		//<#/keep(implements)#>
 	}
 }

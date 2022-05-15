@@ -25,7 +25,6 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				 
 				//<#keep(AtualizarFilme)#> 
 				object ret = new Kernel.Controllers.MovieController().AtualizarFilme(movie); 
 				return Json(ret); 
@@ -42,7 +41,6 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				 
 				//<#keep(AtualizarSessaoFilme)#> 
 				object ret = new Kernel.Controllers.MovieController().AtualizarSessaoFilme(movieSession); 
 				return Json(ret); 
@@ -59,7 +57,6 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				 
 				//<#keep(CriarFilme)#> 
 				object ret = new Kernel.Controllers.MovieController().CriarFilme(movie); 
 				return Json(ret); 
@@ -76,7 +73,6 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				 
 				//<#keep(CriarSessao)#> 
 				object ret = new Kernel.Controllers.MovieController().CriarSessao(sessao); 
 				return Json(ret); 
@@ -106,11 +102,10 @@ namespace EasyCine.AWSServerless.Facade
 		}
 
 		[HttpPost, Route("ListarFilmes")] 
-		public ActionResult ListarFilmes([FromForm] String Name, [FromForm] String Description, [FromForm] String Rating, [FromForm] DateTime CreatedAt, [FromForm] DateTime StartTime, [FromForm] DateTime EndTime, [FromForm] ActivityStatus ActivityStatus) 
+		public ActionResult ListarFilmes([FromForm] String Name, [FromForm] String Description, [FromForm] String Rating, [FromForm] DateTime? CreatedAt, [FromForm] DateTime? StartTime, [FromForm] DateTime? EndTime, [FromForm] ActivityStatus ActivityStatus) 
 		{ 
 			try 
 			{
-				 
 				//<#keep(ListarFilmes)#> 
 				object ret = new Kernel.Controllers.MovieController().ListarFilmes(Name, Description, Rating, CreatedAt, StartTime, EndTime, ActivityStatus); 
 				return Json(ret); 
@@ -123,13 +118,12 @@ namespace EasyCine.AWSServerless.Facade
 		}
 
 		[HttpPost, Route("ListarSessoesFilme")] 
-		public ActionResult ListarSessoesFilme([FromBody] MovieDTO Movie) 
+		public ActionResult ListarSessoesFilme([FromForm] int movieId) 
 		{ 
 			try 
 			{
-				 
 				//<#keep(ListarSessoesFilme)#> 
-				object ret = new Kernel.Controllers.MovieController().ListarSessoesFilme(Movie); 
+				object ret = new Kernel.Controllers.MovieController().ListarSessoesFilme(movieId); 
 				return Json(ret); 
 				//<#/keep(ListarSessoesFilme)#> 
 			} 
@@ -140,13 +134,12 @@ namespace EasyCine.AWSServerless.Facade
 		}
 
 		[HttpPost, Route("RemoverFilme")] 
-		public ActionResult RemoverFilme([FromBody] MovieDTO movie) 
+		public ActionResult RemoverFilme([FromForm] int movieId) 
 		{ 
 			try 
 			{
-				 
 				//<#keep(RemoverFilme)#> 
-				new Kernel.Controllers.MovieController().RemoverFilme(movie); 
+				new Kernel.Controllers.MovieController().RemoverFilme(movieId); 
 				return Ok(); 
 				//<#/keep(RemoverFilme)#> 
 			} 
@@ -161,7 +154,6 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				 
 				//<#keep(RemoverSessaoFilme)#> 
 				new Kernel.Controllers.MovieController().RemoverSessaoFilme(movieSessionId); 
 				return Ok(); 

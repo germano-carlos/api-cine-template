@@ -1,11 +1,14 @@
 //<#keep(imports)#>
 using System;
+using System.Linq;
 using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.DTO.NSSession;
 using EasyCine.Kernel.Model;
 using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSMovie;
 using EasyCine.Kernel.Model.NSSession;
+using Microsoft.AspNetCore.Identity;
+
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Controllers
@@ -21,8 +24,11 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Movie.AtualizarFilme"); 
 			//<#keep(AtualizarFilme)#> 
+			var movieGet = Movie.Get(movie.MovieId);
+			movieGet.Atualizar(movie);
 			context.SaveChanges(); 
-			return null; 
+
+			return movieGet; 
 			//<#/keep(AtualizarFilme)#> 
 		} 
 
@@ -30,8 +36,20 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Movie.AtualizarSessaoFilme"); 
 			//<#keep(AtualizarSessaoFilme)#> 
+
+			if (movieSession.Movie.MovieId <= 0)
+				throw new Exception("Movie Id must be greater than zero !");
+
+			var movie = Movie.Get(movieSession.Movie.MovieId);
+			var session = movie.MovieSessionList.FirstOrDefault(s => s.MovieSessionId == movieSession.MovieSessionId);
+
+			if (session is null)
+				throw new Exception("The expected session was not founded !");
+
+			session.Atualizar(movieSession);
 			context.SaveChanges(); 
-			return null; 
+
+			return session; 
 			//<#/keep(AtualizarSessaoFilme)#> 
 		} 
 
@@ -39,8 +57,10 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Movie.CriarFilme"); 
 			//<#keep(CriarFilme)#> 
+			var movieCriado = new Movie(movie);
 			context.SaveChanges(); 
-			return null; 
+
+			return movieCriado; 
 			//<#/keep(CriarFilme)#> 
 		} 
 
@@ -48,8 +68,14 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Movie.CriarSessao"); 
 			//<#keep(CriarSessao)#> 
+
+			if (Session.Get(sessao.SessionHour) != null)
+				throw new Exception("The session you wanted to create already Exists");
+			
+			var session = new Session(sessao);
 			context.SaveChanges(); 
-			return null; 
+
+			return session; 
 			//<#/keep(CriarSessao)#> 
 		} 
 
@@ -57,33 +83,48 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Movie.CriarSessaoFilme"); 
 			//<#keep(CriarSessaoFilme)#> 
+
+			var movie = Movie.Get(movieSession.Movie.MovieId);
+			if (movie is null)
+				throw new Exception("Movie not found, try again with another values");
+
+			//TODO: Incluir os parametros para criaacao
+			var newSession = new MovieSession();
+			movie.MovieSessionList.Add(newSession);
+			
 			context.SaveChanges(); 
-			return null; 
+			return newSession; 
 			//<#/keep(CriarSessaoFilme)#> 
 		} 
 
-		public Movie[] ListarFilmes(String Name, String Description, String Rating, DateTime CreatedAt, DateTime StartTime, DateTime EndTime, ActivityStatus ActivityStatus) 
+		public Movie[] ListarFilmes(String Name, String Description, String Rating, DateTime? CreatedAt, DateTime? StartTime, DateTime? EndTime, ActivityStatus ActivityStatus) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.ListarFilmes"); 
 			//<#keep(ListarFilmes)#> 
-			context.SaveChanges(); 
-			return null; 
+			return Movie.Listar(Name, Description, Rating, CreatedAt, StartTime, EndTime, ActivityStatus); 
 			//<#/keep(ListarFilmes)#> 
 		} 
 
-		public MovieSession[] ListarSessoesFilme(MovieDTO Movie) 
+		public MovieSession[] ListarSessoesFilme(int movieId) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.ListarSessoesFilme"); 
 			//<#keep(ListarSessoesFilme)#> 
-			context.SaveChanges(); 
-			return null; 
+			
+			var movieGet = Movie.Get(movieId);
+			if (movieGet is null)
+				throw new Exception("Movie not found, try again with another values");
+
+			return movieGet.MovieSessionList.ToArray(); 
 			//<#/keep(ListarSessoesFilme)#> 
 		} 
 
-		public void RemoverFilme(MovieDTO movie) 
+		public void RemoverFilme(int movieId) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.RemoverFilme"); 
 			//<#keep(RemoverFilme)#> 
+
+			Movie.Get(movieId).Inativar();
+			
 			context.SaveChanges(); 
 			//<#/keep(RemoverFilme)#> 
 		} 
@@ -92,6 +133,11 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Movie.RemoverSessaoFilme"); 
 			//<#keep(RemoverSessaoFilme)#> 
+			var movieGet = Movie.Get(movieSessionId);
+			if (movieGet is null)
+				throw new Exception("Movie not found, try again with another values");
+			
+			movieGet.MovieSessionList.FirstOrDefault(m => m.MovieSessionId == movieSessionId)?.Inativar();
 			context.SaveChanges(); 
 			//<#/keep(RemoverSessaoFilme)#> 
 		} 

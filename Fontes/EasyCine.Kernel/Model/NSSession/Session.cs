@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSSession;
 using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSMovie;
 //<#/keep(imports)#>
@@ -24,6 +25,12 @@ namespace EasyCine.Kernel.Model.NSSession
 
 		public Session() { }
 		//<#keep(constructor)#>
+		public Session(SessionDTO sessao)
+		{
+			SessionHour = sessao.SessionHour;
+			CreatedAt = DateTime.Now;
+			ActivityStatus = ActivityStatus.ACTIVE;
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
@@ -32,6 +39,11 @@ namespace EasyCine.Kernel.Model.NSSession
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>
+		public static Session Get(string sessionHour)
+		{
+			return EasyCineContext.Get().SessionSet.FirstOrDefault(s =>
+				s.SessionHour == sessionHour && s.ActivityStatus == ActivityStatus.ACTIVE);
+		}
 		//<#/keep(implements)#>
 	}
 }

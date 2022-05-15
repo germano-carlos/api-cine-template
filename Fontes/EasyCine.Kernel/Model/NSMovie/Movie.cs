@@ -8,7 +8,10 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.Model.NSGeneric;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Model.NSMovie
@@ -30,6 +33,21 @@ namespace EasyCine.Kernel.Model.NSMovie
 
 		public Movie() { }
 		//<#keep(constructor)#>
+		public Movie(MovieDTO movieP)
+		{
+			Atualizar(movieP);
+			
+			CreatedAt = DateTime.Now; 
+		 	ActivityStatus = ActivityStatus.ACTIVE;
+		    
+		    // TODO: Criar os construtores !
+		    foreach (var movieAttachmentElement in movieP.MovieAttachmentList)
+			    new MovieAttachment();
+		    foreach (var movieSessionElement in movieP.MovieSessionList)
+			    new MovieSession();
+		    foreach (var movieCategoryElement in movieP.MovieCategoryList)
+			    new MovieCategory();
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
@@ -37,10 +55,48 @@ namespace EasyCine.Kernel.Model.NSMovie
 			EasyCineContext.Get().MovieSet.Remove(this);
 			//<#/keep(delete)#>
 		}
+
 		//<#keep(implements)#>
-		internal static List<Movie> ObterTodos()
+		public static Movie Get(long movieId)
 		{
-			return EasyCineContext.Get().MovieSet.ToList();
+			return (from m in EasyCineContext.Get().MovieSet
+					.Include(m => m.MovieSessionList).ThenInclude(m => m.Session)
+					.Include(m => m.MovieAttachmentList)
+					.Include(m => m.MovieCategoryList).ThenInclude(m => m.Category)
+				where m.MovieId == movieId
+				select m).FirstOrDefault();
+		}
+		
+		public void Atualizar(MovieDTO movieP)
+		{
+			Name = movieP.Name; 
+			Description = movieP.Description; 
+			Rating = movieP.Rating; 
+			StartTime = movieP.StartTime; 
+			EndTime = movieP.EndTime; 
+			ActivityStatus = movieP.ActivityStatus;
+		}
+
+		public static Movie[] Listar(String name, String description, String rating, DateTime? createdAt, DateTime? startTime, DateTime? endTime, ActivityStatus activityStatus)
+		{
+			return (from m in EasyCineContext.Get().MovieSet
+						.Include(m => m.MovieSessionList).ThenInclude(m => m.Session)
+						.Include(m => m.MovieAttachmentList)
+						.Include(m => m.MovieCategoryList).ThenInclude(m => m.Category)
+					where (string.IsNullOrWhiteSpace(name) || m.Name.Contains(name)) &&
+					      (string.IsNullOrWhiteSpace(description) || m.Description.Contains(description)) &&
+					      (string.IsNullOrWhiteSpace(rating) || m.Rating.Contains(rating)) &&
+					      (!createdAt.HasValue || m.CreatedAt.Date == createdAt.Value.Date) &&
+					      (!startTime.HasValue || m.StartTime.Date == startTime.Value.Date) &&
+					      (!endTime.HasValue || m.EndTime.Date == endTime.Value.Date) &&
+					      (m.ActivityStatus == activityStatus)
+					select m).ToArray();
+		}
+
+		public void Inativar()
+		{
+			MovieSessionList.ForEach(m => m.Inativar());
+			ActivityStatus = ActivityStatus.INACTIVE;
 		}
 		//<#/keep(implements)#>
 	}
