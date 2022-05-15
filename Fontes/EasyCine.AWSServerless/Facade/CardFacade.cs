@@ -1,32 +1,57 @@
-﻿using System;
+
+//<#keep(imports)#>
+using System;
 using Microsoft.AspNetCore.Mvc;
+using EasyCine.Kernel.DTO.NSTransaction;
+
+//<#/keep(imports)#>
 
 namespace EasyCine.AWSServerless.Facade
 {
-    [ApiController]    
+	[ApiController]    
     [Route("api/v1/Card")]	
-    [Produces("application/json")]
-    public class CardFacade : FacadeBase
-    {
-        public CardFacade() 
-        {
-        }
+	[Produces("application/json")]
+	public class CardFacade : FacadeBase
+	{
+		public CardFacade() 
+		{
+		}
 		
 		
-        [HttpPost, Route("FuncaoTeste")] 
-        public ActionResult FuncaoTeste([FromForm] int a, [FromForm] string b) 
-        { 
-            try 
-            {
-                //<#keep(FuncaoTeste)#> 
-                new Kernel.Controllers.CardController().FuncaoTeste(a, b);
-                return null;
-                //<#/keep(FuncaoTeste)#> 
-            } 
-            catch (Exception e) 
-            { 
-                return Erro("EasyCine.Operacao.FuncaoTeste", e); 
-            } 
-        }
-    }
+		[HttpPost, Route("CriarCartao")] 
+		public ActionResult CriarCartao([FromBody] CardDTO cartao) 
+		{ 
+			try 
+			{
+				 
+				//<#keep(CriarCartao)#> 
+				object ret = new Kernel.Controllers.CardController().CriarCartao(cartao); 
+				return Json(ret); 
+				//<#/keep(CriarCartao)#> 
+			} 
+			catch (Exception e) 
+			{ 
+				return Erro("EasyCine.Card.CriarCartao", e); 
+			} 
+		}
+
+		[HttpPost, Route("ExcluirCartao")] 
+		public ActionResult ExcluirCartao([FromForm] int idCartao) 
+		{ 
+			try 
+			{
+				 
+				//<#keep(ExcluirCartao)#> 
+				new Kernel.Controllers.CardController().ExcluirCartao(idCartao); 
+				return Ok(); 
+				//<#/keep(ExcluirCartao)#> 
+			} 
+			catch (Exception e) 
+			{ 
+				return Erro("EasyCine.Card.ExcluirCartao", e); 
+			} 
+		}
+
+		//<#keep(implementation)#><#/keep(implementation)#>
+	}
 }

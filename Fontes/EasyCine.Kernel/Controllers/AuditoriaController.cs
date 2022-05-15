@@ -21,8 +21,9 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Auditoria.createLOG"); 
 			//<#keep(createLOG)#> 
+			var log = new Log(Descricao, StackTrace, TypeLog);
 			context.SaveChanges(); 
-			return null; 
+			return log; 
 			//<#/keep(createLOG)#> 
 		} 
 

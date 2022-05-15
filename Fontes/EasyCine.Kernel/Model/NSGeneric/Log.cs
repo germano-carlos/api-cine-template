@@ -23,6 +23,15 @@ namespace EasyCine.Kernel.Model.NSGeneric
 
 		public Log() { }
 		//<#keep(constructor)#>
+		public Log(String descricao, String stackTrace, TypeLog typeLog)
+		{
+			Descricao = descricao;
+			StackTrace = stackTrace;
+			TypeLog = typeLog;
+			CreatedAt = DateTime.Now;
+
+			EasyCineContext.Get().LogSet.Add(this);
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
