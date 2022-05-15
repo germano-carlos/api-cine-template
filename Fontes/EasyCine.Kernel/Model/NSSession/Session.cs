@@ -15,11 +15,11 @@ using EasyCine.Kernel.Model.NSMovie;
 namespace EasyCine.Kernel.Model.NSSession
 {
 	[Table("Sessions")]
-	public class Session
+	public sealed class Session
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_session", TypeName = "INT")] public int SessionId { get; set; } 
-		[Column("session_hour", TypeName = "VARCHAR(8)"),   MaxLength(8),   Required] public String SessionHour { get; set; } 
-		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
+		[Column("session_hour", TypeName = "VARCHAR(8)"), MaxLength(8), Required] public string SessionHour { get; set; } 
+		[Column("created_at", TypeName = "DATETIME"), Required] public DateTime CreatedAt { get; set; } 
 		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
 
 		public Session() { }

@@ -15,17 +15,17 @@ using EasyCine.Kernel.Model.NSTransaction;
 namespace EasyCine.Kernel.Model.NSUser
 {
 	[Table("Users")]
-	public class User
+	public sealed class User
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_user", TypeName = "BIGINT")] public long UserId { get; set; } 
-		[Column("name", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Name { get; set; } 
-		[Column("email", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Email { get; set; } 
-		[Column("password", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Password { get; set; } 
-		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
-		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
+		[Column("name", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Name { get; set; } 
+		[Column("email", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Email { get; set; } 
+		[Column("password", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Password { get; set; } 
+		[Column("created_at", TypeName = "DATETIME"), Required] public DateTime CreatedAt { get; set; } 
 		[Column("id_user_type", TypeName = "INT"), Required] public UserType UserType { get; set; }
-		[InverseProperty("User")] public virtual List<Card> CardList { get; set; }  // ICollection 
-		[InverseProperty("User")] public virtual List<Transaction> TransactionList { get; set; }  // ICollection 
+		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
+		[InverseProperty("User")] public List<Card> CardList { get; set; }  // ICollection 
+		[InverseProperty("User")] public List<Transaction> TransactionList { get; set; }  // ICollection 
 
 		public User() { }
 		//<#keep(constructor)#>

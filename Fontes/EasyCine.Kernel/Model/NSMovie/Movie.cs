@@ -14,19 +14,19 @@ using EasyCine.Kernel.Model.NSGeneric;
 namespace EasyCine.Kernel.Model.NSMovie
 {
 	[Table("Movies")]
-	public class Movie
+	public sealed class Movie
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie", TypeName = "BIGINT")] public long MovieId { get; set; } 
-		[Column("name", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Name { get; set; } 
-		[Column("ds_movie", TypeName = "VARCHAR(255)"),   MaxLength(255),   Required] public String Description { get; set; } 
-		[Column("rating", TypeName = "VARCHAR(3)"),   MaxLength(3),   Required] public String Rating { get; set; } 
-		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
-		[Column("start_time", TypeName = "DATETIME"),   Required] public DateTime StartTime { get; set; } 
-		[Column("end_time", TypeName = "DATETIME"),   Required] public DateTime EndTime { get; set; } 
+		[Column("name", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Name { get; set; } 
+		[Column("ds_movie", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Description { get; set; } 
+		[Column("rating", TypeName = "VARCHAR(3)"), MaxLength(3), Required] public string Rating { get; set; } 
+		[Column("created_at", TypeName = "DATETIME"), Required] public DateTime CreatedAt { get; set; } 
+		[Column("start_time", TypeName = "DATETIME"), Required] public DateTime StartTime { get; set; } 
+		[Column("end_time", TypeName = "DATETIME"), Required] public DateTime EndTime { get; set; } 
 		[Column("id_status", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
-		[Column("id_movie_category", TypeName = "INT"), Required] public MovieCategory MovieCategory { get; set; }
-		[InverseProperty("Movie")] public virtual List<MovieAttachment> MovieAttachmentList { get; set; }  // ICollection 
-		[InverseProperty("Movie")] public virtual List<MovieSession> MovieSessionList { get; set; }  // ICollection 
+		[InverseProperty("Movie")] public List<MovieAttachment> MovieAttachmentList { get; set; }  // ICollection 
+		[InverseProperty("Movie")] public List<MovieSession> MovieSessionList { get; set; }  // ICollection 
+		[InverseProperty("Movie")] public List<MovieCategory> MovieCategoryList { get; set; }  // ICollection 
 
 		public Movie() { }
 		//<#keep(constructor)#>

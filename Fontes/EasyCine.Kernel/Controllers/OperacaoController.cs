@@ -20,12 +20,10 @@ namespace EasyCine.Kernel.Controllers
 		
 		public List<Movie> FuncaoTeste(int a, string b) 
 		{ 
-			using (var context = EasyCineContext.Get("Operacao.FuncaoTeste")) 
-			{ 
-				//<#keep(FuncaoTeste)#> 
+			using var context = EasyCineContext.Get("Operacao.FuncaoTeste"); 
+			//<#keep(FuncaoTeste)#> 
 				context.SaveChanges(); 
 				//<#/keep(FuncaoTeste)#> 
-			} 
 		} 
 
 		//<#keep(implementation)#><#/keep(implementation)#>

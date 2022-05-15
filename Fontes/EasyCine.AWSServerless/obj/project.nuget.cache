@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZNDaAApnmAO9RRyWzpY1UBHshuJ6DrlpJoyH/f9UVNkNlv0EsbPwJyvHil5tI4BOiUtmXZpf+EipJyr0GCS9cg==",
+  "dgSpecHash": "M/VRHZ8EeZu1bUMRqEx6YiP6AgQAGXHntub576BLqjlJmBgQIb8YPer9Ng/FZAN01+ep/J/QFpxaw3AmEc1joA==",
   "success": true,
   "projectFilePath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.AWSServerless\\EasyCine.AWSServerless.csproj",
   "expectedPackageFiles": [
@@ -156,7 +156,8 @@
     "C:\\Users\\carlo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
   ],
   "logs": []
 }

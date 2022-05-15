@@ -9,7 +9,6 @@
 		`start_time` DATETIME NOT NULL, 
 		`end_time` DATETIME NOT NULL, 
 		`id_status` INT NOT NULL, 
-		`id_movie_category` INT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_movie`)
 	);
@@ -87,6 +86,14 @@
 			`id_session`)
 	);
 
+	create table IF NOT EXISTS `MovieCategories` (
+		`id_movie_category` BIGINT NOT NULL AUTO_INCREMENT, 
+		`CATEGORY` INT NOT NULL, 
+		`id_movie` BIGINT NOT NULL, 
+		PRIMARY KEY CLUSTERED (
+			`id_movie_category`)
+	);
+
 
 
 ALTER TABLE `MovieAttachments` ADD CONSTRAINT `FK_MovieAttachments_Movie` FOREIGN KEY (`MovieId`) REFERENCES `Movies` (`id_movie`);
@@ -105,5 +112,7 @@ ALTER TABLE `Cards` ADD CONSTRAINT `FK_Cards_User` FOREIGN KEY (`UserId`) REFERE
 CREATE INDEX ICards_User ON `Cards` (`UserId`);
 ALTER TABLE `Itens` ADD CONSTRAINT `FK_Itens_Transaction` FOREIGN KEY (`TransactionId`) REFERENCES `Transactions` (`id_transaction`);
 CREATE INDEX IItens_Transaction ON `Itens` (`TransactionId`);
+ALTER TABLE `MovieCategories` ADD CONSTRAINT `FK_MovieCategories_Movie` FOREIGN KEY (`id_movie`) REFERENCES `Movies` (`id_movie`);
+CREATE INDEX IMovieCategories_Movie ON `MovieCategories` (`id_movie`);
 
 -- <#keep(end)#><#/keep(end)#>

@@ -16,18 +16,18 @@ using EasyCine.Kernel.Model.NSUser;
 namespace EasyCine.Kernel.Model.NSTransaction
 {
 	[Table("Transactions")]
-	public class Transaction
+	public sealed class Transaction
 	{
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_transaction", TypeName = "BIGINT")] public long TransactionId { get; set; } 
-		[Column("created_at", TypeName = "DATETIME"),   Required] public DateTime CreatedAt { get; set; } 
+		[Column("created_at", TypeName = "DATETIME"), Required] public DateTime CreatedAt { get; set; } 
 		[Column("id_transaction_status", TypeName = "INT"), Required] public TransactionStatus TransactionStatus { get; set; }
 		[Column("MovieSessionId", TypeName = "BIGINT"), ForeignKey("MovieSession")] public long MovieSessionId { get; set; } 
-		public virtual MovieSession MovieSession { get; set; } 
+		public MovieSession MovieSession { get; set; } 
 		[Column("UserId", TypeName = "BIGINT"), ForeignKey("User")] public long UserId { get; set; } 
-		public virtual User User { get; set; } 
+		public User User { get; set; } 
 		[Column("CardId", TypeName = "BIGINT"), ForeignKey("Card")] public long CardId { get; set; } 
-		public virtual Card Card { get; set; } 
-		[InverseProperty("Transaction")] public virtual List<Item> ItemList { get; set; }  // ICollection 
+		public Card Card { get; set; } 
+		[InverseProperty("Transaction")] public List<Item> ItemList { get; set; }  // ICollection 
 
 		public Transaction() { }
 		//<#keep(constructor)#>

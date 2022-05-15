@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+pakxOrv7BPML6UseLLPWR1nH7OSXFIhnLE40wR7gOe53RhhBlqGnOZ9OfQwlWt9IXXLVTwp8xiDGMkLpNeixg==",
+  "dgSpecHash": "mBt7iZIbUmQGe7d9Y84gacyd/NNr99UUQ+wQoHJRMBbqAiIepfnAOLdVCebOmpfZ8e6CKfbbcqvPXV+0B9nVbA==",
   "success": true,
   "projectFilePath": "C:\\www\\pessoal\\api-cine-template\\Fontes\\EasyCine.Console\\EasyCine.Console.csproj",
   "expectedPackageFiles": [
@@ -179,7 +179,8 @@
     "C:\\Users\\carlo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\carlo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
   ],
   "logs": []
 }

@@ -23,7 +23,7 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				CMUtil.CMAuth.SetLogado(Request.Headers["CMAuthToken"]); 
+				CMAuth.SetToken(Request.Headers["CMAuthToken"]); 
 				//<#keep(FuncaoTeste)#> 
 				new Kernel.Controllers.OperacaoController().FuncaoTeste(a, b);
 				return null;

@@ -47,6 +47,7 @@ namespace EasyCine.Kernel.Model
 		public DbSet<Card> CardSet { get; set; }
 		public DbSet<Item> ItemSet { get; set; }
 		public DbSet<Session> SessionSet { get; set; }
+		public DbSet<MovieCategory> MovieCategorySet { get; set; }
 		
 		private EasyCineContext(string titulo) 
 		{ 
@@ -109,7 +110,7 @@ namespace EasyCine.Kernel.Model
 		{
 			base.Dispose();
 			_instance.Value = null;
-			CMAuth.SetLogado(null);
+			CMAuth.SetToken(null);
 			Performance.Stop();
 			//<#keep(dispose)#><#/keep(dispose)#>
 		}
