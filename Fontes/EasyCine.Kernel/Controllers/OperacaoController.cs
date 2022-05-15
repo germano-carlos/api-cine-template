@@ -25,6 +25,16 @@ namespace EasyCine.Kernel.Controllers
 		{
 		}
 		
+		
+		public List<Movie> FuncaoTeste(int a, string b) 
+		{ 
+			using var context = EasyCineContext.Get("Operacao.FuncaoTeste"); 
+			//<#keep(FuncaoTeste)#> 
+			context.SaveChanges(); 
+			return null; 
+			//<#/keep(FuncaoTeste)#> 
+		} 
+
 		public Movie[] ListarFilmes(String Name, String Description, String Rating, DateTime CreatedAt, DateTime StartTime, DateTime EndTime, ActivityStatus ActivityStatus) 
 		{ 
 			using var context = EasyCineContext.Get("Operacao.ListarFilmes"); 

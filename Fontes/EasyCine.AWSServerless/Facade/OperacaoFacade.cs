@@ -22,12 +22,31 @@ namespace EasyCine.AWSServerless.Facade
 		public OperacaoFacade() 
 		{
 		}
+		
+		
+		[HttpPost, Route("FuncaoTeste")] 
+		public ActionResult FuncaoTeste([FromForm] int a, [FromForm] string b) 
+		{ 
+			try 
+			{
+				 
+				//<#keep(FuncaoTeste)#> 
+				object ret = new Kernel.Controllers.OperacaoController().FuncaoTeste(a, b); 
+				return Json(ret); 
+				//<#/keep(FuncaoTeste)#> 
+			} 
+			catch (Exception e) 
+			{ 
+				return Erro("EasyCine.Operacao.FuncaoTeste", e); 
+			} 
+		}
 
 		[HttpPost, Route("ListarFilmes")] 
 		public ActionResult ListarFilmes([FromForm] String Name, [FromForm] String Description, [FromForm] String Rating, [FromForm] DateTime CreatedAt, [FromForm] DateTime StartTime, [FromForm] DateTime EndTime, [FromForm] ActivityStatus ActivityStatus) 
 		{ 
 			try 
 			{
+				 
 				//<#keep(ListarFilmes)#> 
 				object ret = new Kernel.Controllers.OperacaoController().ListarFilmes(Name, Description, Rating, CreatedAt, StartTime, EndTime, ActivityStatus); 
 				return Json(ret); 

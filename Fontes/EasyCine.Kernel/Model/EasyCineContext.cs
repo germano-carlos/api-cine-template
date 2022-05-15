@@ -8,6 +8,7 @@ using System;
 using System.Diagnostics;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSMovie;
 using EasyCine.Kernel.Model.NSUser;
 using EasyCine.Kernel.Model.NSTransaction;
@@ -48,6 +49,7 @@ namespace EasyCine.Kernel.Model
 		public DbSet<Item> ItemSet { get; set; }
 		public DbSet<Session> SessionSet { get; set; }
 		public DbSet<MovieCategory> MovieCategorySet { get; set; }
+		public DbSet<Log> LogSet { get; set; }
 		
 		private EasyCineContext(string titulo) 
 		{ 

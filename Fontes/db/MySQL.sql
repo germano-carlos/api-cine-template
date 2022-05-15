@@ -95,6 +95,16 @@
 			`id_movie_category`)
 	);
 
+	create table IF NOT EXISTS `logs` (
+		`Id` BIGINT NOT NULL AUTO_INCREMENT, 
+		`descricao` VARCHAR(1000) NOT NULL, 
+		`created_at` DATETIME NOT NULL, 
+		`stack_trace` VARCHAR(0) NULL, 
+		`TYPELOG` INT NOT NULL, 
+		PRIMARY KEY CLUSTERED (
+			`Id`)
+	);
+
 
 
 ALTER TABLE `MovieAttachments` ADD CONSTRAINT `FK_MovieAttachments_Movie` FOREIGN KEY (`MovieId`) REFERENCES `Movies` (`id_movie`);
