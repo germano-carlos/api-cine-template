@@ -22,8 +22,7 @@ namespace EasyCine.AWSServerless.Facade
 		public ActionResult FuncaoTeste([FromForm] int a, [FromForm] string b) 
 		{ 
 			try 
-			{
-				CMAuth.SetToken(Request.Headers["CMAuthToken"]); 
+			{ 
 				//<#keep(FuncaoTeste)#> 
 				new Kernel.Controllers.OperacaoController().FuncaoTeste(a, b);
 				return null;

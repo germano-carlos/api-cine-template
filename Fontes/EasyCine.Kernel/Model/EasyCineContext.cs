@@ -51,12 +51,10 @@ namespace EasyCine.Kernel.Model
 		
 		private EasyCineContext(string titulo) 
 		{ 
-			Performance.Start(titulo); 
 			//<#keep(criacao)#><#/keep(criacao)#>
 		}
 		private EasyCineContext(string titulo, string detalhes)
 		{
-			Performance.Start(titulo, detalhes);
 			//<#keep(criacao2)#><#/keep(criacao2)#>
 		}
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -110,8 +108,6 @@ namespace EasyCine.Kernel.Model
 		{
 			base.Dispose();
 			_instance.Value = null;
-			CMAuth.SetToken(null);
-			Performance.Stop();
 			//<#keep(dispose)#><#/keep(dispose)#>
 		}
 		//<#keep(end)#><#/keep(end)#>

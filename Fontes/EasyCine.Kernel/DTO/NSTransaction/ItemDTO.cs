@@ -11,6 +11,7 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 		public long ItemId;
 		public decimal Amount;
 		public String Name;
+		public String Seat;
 		public TransactionDTO Transaction;
 
 		//<#keep(implements)#>

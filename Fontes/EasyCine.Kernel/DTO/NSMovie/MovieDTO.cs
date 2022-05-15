@@ -19,9 +19,9 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		public DateTime StartTime;
 		public DateTime EndTime;
 		public ActivityStatus ActivityStatus;
-		public MovieCategory MovieCategory;
-		public MovieSessionDTO MovieSession;
 		public List<MovieAttachmentDTO> MovieAttachmentList = new List<MovieAttachmentDTO>();
+		public List<MovieSessionDTO> MovieSessionList = new List<MovieSessionDTO>();
+		public List<MovieCategoryDTO> MovieCategoryList = new List<MovieCategoryDTO>();
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

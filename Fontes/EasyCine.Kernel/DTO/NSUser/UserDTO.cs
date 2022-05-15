@@ -18,8 +18,8 @@ namespace EasyCine.Kernel.DTO.NSUser
 		public DateTime CreatedAt;
 		public UserType UserType;
 		public ActivityStatus ActivityStatus;
-		public TransactionDTO Transaction;
 		public List<CardDTO> CardList = new List<CardDTO>();
+		public List<TransactionDTO> TransactionList = new List<TransactionDTO>();
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

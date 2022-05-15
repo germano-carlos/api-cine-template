@@ -6,8 +6,10 @@ using System.IO;
 
 namespace EasyCine.Kernel.Util
 {
-	public static class Constantes
+	public class Constantes
 	{
-		public static string ConnectionString = "server=database-1.cmu57yqd5fbu.sa-east-1.rds.amazonaws.com;port=3306;database=cinema;uid=cine_app;password=EZfQkg18@$uA;";
+		//<#keep(conteudo)#>
+		public static string ConnectionString = "server=localhost;port=3306;database=movie;uid=root;password=root;";
+		//<#/keep(conteudo)#>
 	}
 }

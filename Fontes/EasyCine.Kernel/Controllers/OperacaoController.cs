@@ -22,8 +22,9 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Operacao.FuncaoTeste"); 
 			//<#keep(FuncaoTeste)#> 
-				context.SaveChanges(); 
-				//<#/keep(FuncaoTeste)#> 
+			context.SaveChanges(); 
+			//<#/keep(FuncaoTeste)#> 
+			return null;
 		} 
 
 		//<#keep(implementation)#><#/keep(implementation)#>

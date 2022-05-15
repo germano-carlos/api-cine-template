@@ -14,7 +14,6 @@ namespace EasyCine.Kernel.DTO.NSSession
 		public String SessionHour;
 		public DateTime CreatedAt;
 		public ActivityStatus ActivityStatus;
-		public MovieSessionDTO MovieSession;
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

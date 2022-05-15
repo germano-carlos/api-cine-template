@@ -15,6 +15,7 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 		public String SecurityCode;
 		public DateTime ExpirationDate;
 		public UserDTO User;
+		public List<TransactionDTO> TransactionList = new List<TransactionDTO>();
 
 		//<#keep(implements)#>
 		//<#/keep(implements)#>

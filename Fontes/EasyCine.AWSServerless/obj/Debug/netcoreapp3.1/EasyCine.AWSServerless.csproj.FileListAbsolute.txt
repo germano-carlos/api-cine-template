@@ -73,8 +73,6 @@ C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcore
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcoreapp3.1\EasyCine.Kernel.dll
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcoreapp3.1\EasyCine.Kernel.pdb
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\staticwebassets\EasyCine.AWSServerless.StaticWebAssets.Manifest.cache
-C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\staticwebassets\EasyCine.AWSServerless.StaticWebAssets.xml
-C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\scopedcss\bundle\EasyCine.AWSServerless.styles.css
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.RazorTargetAssemblyInfo.cache
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.csproj.CopyComplete
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.dll
@@ -83,3 +81,4 @@ C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcore
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.genruntimeconfig.cache
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.MvcApplicationPartsAssemblyInfo.cs
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcoreapp3.1\EasyCine.AWSServerless.StaticWebAssets.xml
