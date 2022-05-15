@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSUser;
 //<#/keep(imports)#>
 
@@ -21,6 +22,7 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		[Column("card_number", TypeName = "VARCHAR(16)"), MaxLength(16), Required] public string CardNumber { get; set; } 
 		[Column("security_code", TypeName = "VARCHAR(3)"), MaxLength(3), Required] public string SecurityCode { get; set; } 
 		[Column("expiration_date", TypeName = "DATETIME"), Required] public DateTime ExpirationDate { get; set; } 
+		[Column("ACTIVITYSTATUS", TypeName = "INT"), Required] public ActivityStatus ActivityStatus { get; set; }
 		[Column("UserId", TypeName = "BIGINT"), ForeignKey("User")] public long UserId { get; set; } 
 		public User User { get; set; } 
 		[InverseProperty("Card")] public List<Transaction> TransactionList { get; set; }  // ICollection 

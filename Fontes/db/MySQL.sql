@@ -62,6 +62,7 @@
 		`card_number` VARCHAR(16) NOT NULL, 
 		`security_code` VARCHAR(3) NOT NULL, 
 		`expiration_date` DATETIME NOT NULL, 
+		`ACTIVITYSTATUS` INT NOT NULL, 
 		`UserId` BIGINT NOT NULL, 
 		PRIMARY KEY CLUSTERED (
 			`id_card`)

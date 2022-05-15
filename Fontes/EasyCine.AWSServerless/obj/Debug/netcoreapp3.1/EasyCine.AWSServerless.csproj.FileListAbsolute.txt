@@ -81,4 +81,3 @@ C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcore
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.genruntimeconfig.cache
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\obj\Debug\netcoreapp3.1\EasyCine.AWSServerless.MvcApplicationPartsAssemblyInfo.cs
 C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
-C:\www\pessoal\api-cine-template\Fontes\EasyCine.AWSServerless\bin\Debug\netcoreapp3.1\EasyCine.AWSServerless.StaticWebAssets.xml
