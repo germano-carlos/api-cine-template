@@ -43,6 +43,11 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 		{
 			return new List<TransactionDTO>(elements.Select(FromEntity));
 		}
+		
+		public static TransactionDTO[] FromEntity(Transaction[] elements)
+		{
+			return new List<TransactionDTO>(elements.Select(FromEntity)).ToArray();
+		}
 		//<#/keep(implements)#>
 	}
 }

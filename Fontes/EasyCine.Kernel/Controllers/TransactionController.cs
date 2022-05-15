@@ -13,30 +13,38 @@ namespace EasyCine.Kernel.Controllers
 		}
 		
 		
-		public Transaction AtualizarTransacoes(TransactionDTO transacao) 
+		public TransactionDTO AtualizarTransacoes(TransactionDTO transacao) 
 		{ 
 			using var context = EasyCineContext.Get("Transaction.AtualizarTransacoes"); 
 			//<#keep(AtualizarTransacoes)#> 
+			
+			var t = Transaction.Get(transacao.TransactionId);
+			t.Atualizar(transacao);
 			context.SaveChanges(); 
-			return null; 
+
+			return TransactionDTO.FromEntity(t); 
 			//<#/keep(AtualizarTransacoes)#> 
 		} 
 
-		public Transaction CriarNovaTransacao(TransactionDTO transacao) 
+		public TransactionDTO CriarNovaTransacao(TransactionDTO transacao) 
 		{ 
 			using var context = EasyCineContext.Get("Transaction.CriarNovaTransacao"); 
 			//<#keep(CriarNovaTransacao)#> 
+			var t = new Transaction(transacao);
 			context.SaveChanges(); 
-			return null; 
+
+			return TransactionDTO.FromEntity(t); 
 			//<#/keep(CriarNovaTransacao)#> 
 		} 
 
-		public Transaction[] ObterTransacoesUsuario(int usuarioId) 
+		public TransactionDTO[] ObterTransacoesUsuario(int usuarioId) 
 		{ 
 			using var context = EasyCineContext.Get("Transaction.ObterTransacoesUsuario"); 
 			//<#keep(ObterTransacoesUsuario)#> 
+			var t = Transaction.ObterTransacoesUsuario(usuarioId);
 			context.SaveChanges(); 
-			return null; 
+
+			return TransactionDTO.FromEntity(t); 
 			//<#/keep(ObterTransacoesUsuario)#> 
 		} 
 

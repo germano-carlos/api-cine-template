@@ -8,6 +8,8 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSTransaction;
+
 //<#/keep(imports)#>
 
 namespace EasyCine.Kernel.Model.NSTransaction
@@ -24,6 +26,16 @@ namespace EasyCine.Kernel.Model.NSTransaction
 
 		public Item() { }
 		//<#keep(constructor)#>
+		public Item(ItemDTO item, Transaction transaction)
+		{
+			ItemId = item.ItemId; 
+			Amount = item.Amount; 
+			Name = item.Name; 
+			Seat = item.Seat; 
+			Transaction = transaction;
+
+			EasyCineContext.Get().ItemSet.Add(this);
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{

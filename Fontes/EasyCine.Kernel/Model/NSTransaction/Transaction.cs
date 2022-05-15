@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 using EasyCine.Kernel.DTO.NSTransaction;
 using EasyCine.Kernel.Model.NSMovie;
+using EasyCine.Kernel.Model.NSSession;
 using EasyCine.Kernel.Model.NSUser;
 
 //<#/keep(imports)#>
@@ -58,6 +59,32 @@ namespace EasyCine.Kernel.Model.NSTransaction
 			//<#keep(delete)#>
 			EasyCineContext.Get().TransactionSet.Remove(this);
 			//<#/keep(delete)#>
+		}
+		
+		public static Transaction Get(long id)
+		{
+			//<#keep(delete)#>
+			return EasyCineContext.Get().TransactionSet.Find(id);
+			//<#/keep(delete)#>
+		}
+
+		public void Atualizar(TransactionDTO transaction)
+		{
+			TransactionStatus = transaction.TransactionStatus;
+			foreach (var item in transaction.ItemList)
+				new Item(item, this);
+		}
+
+		public static Transaction[] ObterTransacoesUsuario(long idUsuario)
+		{
+			return (from t in EasyCineContext.Get().TransactionSet
+						.Include(t => t.Card)
+						.Include(t => t.ItemList)
+						.Include(t => t.User)
+						.Include(t => t.MovieSession).ThenInclude(t => t.Movie)
+					where t.User.UserId == idUsuario
+					select t
+					).ToArray();
 		}
 		//<#keep(implements)#>
 		//<#/keep(implements)#>
