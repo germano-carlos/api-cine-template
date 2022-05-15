@@ -22,6 +22,9 @@ namespace EasyCine.Kernel.DTO.NSSession
 		//<#keep(implements)#>
 		public static SessionDTO FromEntity(Session element)
 		{
+			if (element is null)
+				return new SessionDTO();
+
 			return new SessionDTO()
 			{
 				SessionId = element.SessionId,

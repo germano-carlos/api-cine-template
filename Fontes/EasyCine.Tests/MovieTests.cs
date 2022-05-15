@@ -6,6 +6,7 @@ using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.DTO.NSTransaction;
 using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSMovie;
+using Newtonsoft.Json;
 using Xunit;
 
 namespace EasyCine.Tests;
@@ -32,31 +33,38 @@ public class MovieTests
     [Fact]
     public void CriarNovoFilme()
     {
-        var movie = new Movie()
+        var movie = new MovieDTO()
         {
             ActivityStatus = ActivityStatus.ACTIVE,
-            CreatedAt = DateTime.Now,
             Description = "Esta é a criação de um filme teste",
             StartTime = DateTime.Now.AddDays(15),
             EndTime = DateTime.Now.AddDays(30),
-            MovieAttachmentList = new List<MovieAttachment>(),
-            MovieCategoryList = new List<MovieCategory>()
+            MovieAttachmentList = new List<MovieAttachmentDTO>(),
+            MovieCategoryList = new List<MovieCategoryDTO>()
             {
-                new MovieCategory()
+                new MovieCategoryDTO()
                 {
                     Category = Category.ACTION
                 }
             },
-            MovieSessionList = new List<MovieSession>(),
+            MovieSessionList = new List<MovieSessionDTO>(),
             Name = "Charlinhos, o Guerreiro Trovão",
             Rating = "10.0"
         };
 
-        var result = new MovieController().CriarFilme(MovieDTO.FromEntity(movie));
-        var r2 = new MovieController().CriarFilme(MovieDTO.FromEntity(movie));
-        //var obter = new MovieController().ListarFilmes(null, null, null, null, null, null, ActivityStatus.ACTIVE);
+        var result = _controller.CriarFilme((movie));
+
+        movie.MovieId = result.MovieId;
+        movie.CreatedAt = result.CreatedAt;
+        movie.MovieCategoryList.ForEach((m) =>
+        {
+            var categoria = result.MovieCategoryList.FirstOrDefault(cc => cc.Category == m.Category);
+            m.MovieCategoryId = categoria!.MovieCategoryId;
+        });
         
-        
-        Assert.Equal(r2, result);
+        //Assert.Equal(ob1, ob2);
+        string x = JsonConvert.SerializeObject(movie, Formatting.Indented);
+        string xs = JsonConvert.SerializeObject(result, Formatting.Indented);
+        Assert.Equal(movie, result);
     }
 }

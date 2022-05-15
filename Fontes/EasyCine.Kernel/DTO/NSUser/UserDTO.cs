@@ -25,6 +25,9 @@ namespace EasyCine.Kernel.DTO.NSUser
 		//<#keep(implements)#>
 		public static UserDTO FromEntity(User element)
 		{
+			if (element is null)
+				return new UserDTO();
+
 			return new UserDTO()
 			{
 				UserId = element.UserId,

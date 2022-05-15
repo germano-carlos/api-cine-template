@@ -19,6 +19,9 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		//<#keep(implements)#>
 		public static MovieAttachmentDTO FromEntity(MovieAttachment element)
 		{
+			if (element is null)
+				return new MovieAttachmentDTO();
+
 			return new MovieAttachmentDTO()
 			{
 				MovieAttachmentId = element.MovieAttachmentId, 

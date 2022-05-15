@@ -18,6 +18,9 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		//<#keep(implements)#>
 		public static MovieCategoryDTO FromEntity(MovieCategory element)
 		{
+			if (element is null)
+				return new MovieCategoryDTO();
+
 			return new MovieCategoryDTO()
 			{
 				Category = element.Category,

@@ -23,7 +23,7 @@ namespace EasyCine.Kernel.Model.NSMovie
 		[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity), Column("id_movie", TypeName = "BIGINT")] public long MovieId { get; set; } 
 		[Column("name", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Name { get; set; } 
 		[Column("ds_movie", TypeName = "VARCHAR(255)"), MaxLength(255), Required] public string Description { get; set; } 
-		[Column("rating", TypeName = "VARCHAR(3)"), MaxLength(3), Required] public string Rating { get; set; } 
+		[Column("rating", TypeName = "VARCHAR(3)"), MaxLength(4), Required] public string Rating { get; set; } 
 		[Column("created_at", TypeName = "DATETIME"), Required] public DateTime CreatedAt { get; set; } 
 		[Column("start_time", TypeName = "DATETIME"), Required] public DateTime StartTime { get; set; } 
 		[Column("end_time", TypeName = "DATETIME"), Required] public DateTime EndTime { get; set; } 
@@ -40,6 +40,9 @@ namespace EasyCine.Kernel.Model.NSMovie
 			
 			CreatedAt = DateTime.Now; 
 		 	ActivityStatus = ActivityStatus.ACTIVE;
+		    MovieAttachmentList = new List<MovieAttachment>();
+		    MovieSessionList = new List<MovieSession>();
+		    MovieCategoryList = new List<MovieCategory>();
 		    
 		    foreach (var movieAttachmentElement in movieP.MovieAttachmentList)
 			    new MovieAttachment(movieAttachmentElement, this);

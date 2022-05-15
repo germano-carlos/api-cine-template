@@ -25,6 +25,9 @@ namespace EasyCine.Kernel.DTO.NSMovie
 		//<#keep(implements)#>
 		public static MovieSessionDTO FromEntity(MovieSession element)
 		{
+			if (element is null)
+				return new MovieSessionDTO();
+
 			return new MovieSessionDTO()
 			{
 				MovieSessionId = element.MovieSessionId, 

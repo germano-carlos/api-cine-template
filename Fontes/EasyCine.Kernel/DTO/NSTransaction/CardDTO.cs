@@ -25,6 +25,9 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 		//<#keep(implements)#>
 		public static CardDTO FromEntity(Card element)
 		{
+			if (element is null)
+				return new CardDTO();
+
 			return new CardDTO()
 			{
 				CardId = element.CardId,
