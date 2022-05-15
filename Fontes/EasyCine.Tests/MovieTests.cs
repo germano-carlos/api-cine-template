@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Castle.Core;
 using EasyCine.Kernel.Controllers;
 using EasyCine.Kernel.DTO.NSMovie;
 using EasyCine.Kernel.DTO.NSTransaction;
@@ -37,8 +38,8 @@ public class MovieTests
         {
             ActivityStatus = ActivityStatus.ACTIVE,
             Description = "Esta é a criação de um filme teste",
-            StartTime = DateTime.Now.AddDays(15),
-            EndTime = DateTime.Now.AddDays(30),
+            StartTime = new DateTime(2022,06,01),
+            EndTime = new DateTime(2022,06,15, 23, 59, 59),
             MovieAttachmentList = new List<MovieAttachmentDTO>(),
             MovieCategoryList = new List<MovieCategoryDTO>()
             {
@@ -61,10 +62,10 @@ public class MovieTests
             var categoria = result.MovieCategoryList.FirstOrDefault(cc => cc.Category == m.Category);
             m.MovieCategoryId = categoria!.MovieCategoryId;
         });
+
+        var resultSerialized = JsonConvert.SerializeObject(result);
+        var movieSerialized = JsonConvert.SerializeObject(result);
         
-        //Assert.Equal(ob1, ob2);
-        string x = JsonConvert.SerializeObject(movie, Formatting.Indented);
-        string xs = JsonConvert.SerializeObject(result, Formatting.Indented);
-        Assert.Equal(movie, result);
+        Assert.Equal(movieSerialized, resultSerialized);
     }
 }
