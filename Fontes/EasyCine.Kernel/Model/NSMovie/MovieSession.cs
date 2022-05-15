@@ -57,6 +57,11 @@ namespace EasyCine.Kernel.Model.NSMovie
 				throw new Exception("It is not possibile to do this operation, please create another movie to do this !");
 		}
 
+		public static MovieSession Get(long id)
+		{
+			return EasyCineContext.Get().MovieSessionSet.Find(id);
+		}
+
 		public void Inativar()
 		{
 			if(ActivityStatus == ActivityStatus.INACTIVE)

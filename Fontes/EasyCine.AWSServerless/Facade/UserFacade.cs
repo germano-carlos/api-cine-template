@@ -40,7 +40,6 @@ namespace EasyCine.AWSServerless.Facade
 		{ 
 			try 
 			{
-				 
 				//<#keep(CriarUsuario)#> 
 				object ret = new Kernel.Controllers.UserController().CriarUsuario(usuario); 
 				return Json(ret); 
@@ -53,7 +52,7 @@ namespace EasyCine.AWSServerless.Facade
 		}
 
 		[HttpPost, Route("ExcluirUsuario")] 
-		public ActionResult ExcluirUsuario([FromForm] int usuarioId) 
+		public ActionResult ExcluirUsuario([FromForm] long usuarioId) 
 		{ 
 			try 
 			{
@@ -70,7 +69,7 @@ namespace EasyCine.AWSServerless.Facade
 		}
 
 		[HttpPost, Route("ObterUsuario")] 
-		public ActionResult ObterUsuario([FromForm] int usuarioId) 
+		public ActionResult ObterUsuario([FromForm] long usuarioId) 
 		{ 
 			try 
 			{

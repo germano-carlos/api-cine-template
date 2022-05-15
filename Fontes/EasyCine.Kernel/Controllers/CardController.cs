@@ -23,7 +23,7 @@ namespace EasyCine.Kernel.Controllers
 			//<#/keep(CriarCartao)#> 
 		} 
 
-		public void ExcluirCartao(int idCartao) 
+		public void ExcluirCartao(long idCartao) 
 		{ 
 			using var context = EasyCineContext.Get("Card.ExcluirCartao"); 
 			//<#keep(ExcluirCartao)#> 

@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSTransaction;
 using EasyCine.Kernel.Model.NSMovie;
 using EasyCine.Kernel.Model.NSUser;
 
@@ -31,6 +32,26 @@ namespace EasyCine.Kernel.Model.NSTransaction
 
 		public Transaction() { }
 		//<#keep(constructor)#>
+		public Transaction(TransactionDTO transaction)
+		{
+			CreatedAt = DateTime.Now;
+			TransactionStatus = transaction.TransactionStatus;
+			User = User.Get(transaction.User.UserId);
+			Card = Card.Get(transaction.Card.CardId);
+			MovieSession = MovieSession.Get(transaction.MovieSession.MovieSessionId);
+			ItemList = new List<Item>();
+		}
+		
+		public Transaction(TransactionDTO transaction, User usuario)
+		{
+			CreatedAt = DateTime.Now;
+			TransactionStatus = transaction.TransactionStatus;
+			User = usuario;
+			Card = Card.Get(transaction.Card.CardId);
+			MovieSession = MovieSession.Get(transaction.MovieSession.MovieSessionId);
+			ItemList = new List<Item>();
+		}
+
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{

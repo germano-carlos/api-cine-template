@@ -33,7 +33,7 @@ namespace EasyCine.Kernel.DTO.NSUser
 				UserId = element.UserId,
 				Name = element.Name,
 				Email = element.Email,
-				Password = element.Password,
+				Password = null,
 				CreatedAt = element.CreatedAt,
 				UserType = element.UserType,
 				ActivityStatus = element.ActivityStatus,

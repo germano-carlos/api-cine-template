@@ -14,7 +14,7 @@ namespace EasyCine.Kernel.Controllers
 		}
 		
 		
-		public User AtualizarUsuario(UserDTO user) 
+		public UserDTO AtualizarUsuario(UserDTO user) 
 		{ 
 			using var context = EasyCineContext.Get("User.AtualizarUsuario"); 
 			//<#keep(AtualizarUsuario)#> 
@@ -23,29 +23,31 @@ namespace EasyCine.Kernel.Controllers
 			//<#/keep(AtualizarUsuario)#> 
 		} 
 
-		public User CriarUsuario(UserDTO usuario) 
+		public UserDTO CriarUsuario(UserDTO usuario) 
 		{ 
 			using var context = EasyCineContext.Get("User.CriarUsuario"); 
 			//<#keep(CriarUsuario)#> 
+			var user = new User(usuario);
 			context.SaveChanges(); 
-			return null; 
+
+			return UserDTO.FromEntity(user); 
 			//<#/keep(CriarUsuario)#> 
 		} 
 
-		public void ExcluirUsuario(int usuarioId) 
+		public void ExcluirUsuario(long usuarioId) 
 		{ 
 			using var context = EasyCineContext.Get("User.ExcluirUsuario"); 
 			//<#keep(ExcluirUsuario)#> 
+			User.Get(usuarioId).Inativar();
 			context.SaveChanges(); 
 			//<#/keep(ExcluirUsuario)#> 
 		} 
 
-		public User ObterUsuario(int usuarioId) 
+		public UserDTO ObterUsuario(long usuarioId) 
 		{ 
 			using var context = EasyCineContext.Get("User.ObterUsuario"); 
-			//<#keep(ObterUsuario)#> 
-			context.SaveChanges(); 
-			return null; 
+			//<#keep(ObterUsuario)#>  
+			return UserDTO.FromEntity(User.Get(usuarioId)); 
 			//<#/keep(ObterUsuario)#> 
 		} 
 

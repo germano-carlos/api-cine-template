@@ -41,6 +41,19 @@ namespace EasyCine.Kernel.Model.NSTransaction
 
 			EasyCineContext.Get().CardSet.Add(this);
 		}
+		
+		public Card(CardDTO cartao, User user)
+		{
+			HolderName = cartao.HolderName;
+			CardNumber = cartao.CardNumber;
+			SecurityCode = cartao.SecurityCode;
+			ExpirationDate = cartao.ExpirationDate;
+			ActivityStatus = ActivityStatus.ACTIVE;
+			User = user;
+
+			EasyCineContext.Get().CardSet.Add(this);
+		}
+		
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
@@ -49,7 +62,7 @@ namespace EasyCine.Kernel.Model.NSTransaction
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>
-		public static Card Get(int id)
+		public static Card Get(long id)
 		{
 			return EasyCineContext.Get().CardSet.Find(id);
 		}
