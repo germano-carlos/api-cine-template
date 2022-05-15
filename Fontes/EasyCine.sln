@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCine.AWSServerless", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCine.Console", "EasyCine.Console\EasyCine.Console.csproj", "{2AD2B447-8E3E-44CA-9BA5-975C7FA2C263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCine.Tests", "EasyCine.Tests\EasyCine.Tests.csproj", "{D514BDBD-1835-4466-8B88-0AE69FE66E88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2AD2B447-8E3E-44CA-9BA5-975C7FA2C263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AD2B447-8E3E-44CA-9BA5-975C7FA2C263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AD2B447-8E3E-44CA-9BA5-975C7FA2C263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D514BDBD-1835-4466-8B88-0AE69FE66E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D514BDBD-1835-4466-8B88-0AE69FE66E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D514BDBD-1835-4466-8B88-0AE69FE66E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D514BDBD-1835-4466-8B88-0AE69FE66E88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
