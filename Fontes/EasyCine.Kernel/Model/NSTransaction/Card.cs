@@ -8,6 +8,7 @@ using System.Data;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using EasyCine.Kernel.DTO.NSTransaction;
 using EasyCine.Kernel.Model.NSGeneric;
 using EasyCine.Kernel.Model.NSUser;
 //<#/keep(imports)#>
@@ -29,6 +30,17 @@ namespace EasyCine.Kernel.Model.NSTransaction
 
 		public Card() { }
 		//<#keep(constructor)#>
+		public Card(CardDTO cartao)
+		{
+			HolderName = cartao.HolderName;
+			CardNumber = cartao.CardNumber;
+			SecurityCode = cartao.SecurityCode;
+			ExpirationDate = cartao.ExpirationDate;
+			ActivityStatus = ActivityStatus.ACTIVE;
+			User = NSUser.User.Get(cartao.User.UserId);
+
+			EasyCineContext.Get().CardSet.Add(this);
+		}
 		//<#/keep(constructor)#>
 		internal void Delete()
 		{
@@ -37,6 +49,18 @@ namespace EasyCine.Kernel.Model.NSTransaction
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>
+		public static Card Get(int id)
+		{
+			return EasyCineContext.Get().CardSet.Find(id);
+		}
+
+		public void Inativar()
+		{
+			if (ActivityStatus == ActivityStatus.INACTIVE)
+				return;
+
+			ActivityStatus = ActivityStatus.INACTIVE;
+		}
 		//<#/keep(implements)#>
 	}
 }

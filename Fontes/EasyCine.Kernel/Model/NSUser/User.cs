@@ -37,6 +37,10 @@ namespace EasyCine.Kernel.Model.NSUser
 			//<#/keep(delete)#>
 		}
 		//<#keep(implements)#>
+		public static User Get(long id)
+		{
+			return EasyCineContext.Get().UserSet.Find(id);
+		}
 		//<#/keep(implements)#>
 	}
 }

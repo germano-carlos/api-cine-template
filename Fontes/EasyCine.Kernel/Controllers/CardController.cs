@@ -17,8 +17,9 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Card.CriarCartao"); 
 			//<#keep(CriarCartao)#> 
+			var cartaoGerado = new Card(cartao);
 			context.SaveChanges(); 
-			return null; 
+			return cartaoGerado; 
 			//<#/keep(CriarCartao)#> 
 		} 
 
@@ -26,6 +27,7 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("Card.ExcluirCartao"); 
 			//<#keep(ExcluirCartao)#> 
+			Card.Get(idCartao).Inativar();
 			context.SaveChanges(); 
 			//<#/keep(ExcluirCartao)#> 
 		} 
