@@ -1,7 +1,8 @@
 .idea/
 /Fontes/.vs/
-/Fontes/EasyCine.API/obj/
 /Fontes/EasyCine.Console/obj/
+/Fontes/EasyCine.Tests/bin/
+/Fontes/EasyCine.Tests/obj/
 /Fontes/EasyCine.Kernel/obj/
 /Fontes/EasyCine.AWSServerless/obj/
 /Fontes/EasyCine.API/bin/
