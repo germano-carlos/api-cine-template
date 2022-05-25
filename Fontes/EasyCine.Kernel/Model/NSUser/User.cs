@@ -55,7 +55,7 @@ namespace EasyCine.Kernel.Model.NSUser
 		//<#keep(implements)#>
 		public static User Get(long id)
 		{
-			return EasyCineContext.Get().UserSet.Find(id);
+			return EasyCineContext.Get().UserSet.Include(c => c.CardList).FirstOrDefault(c => c.UserId == id);
 		}
 
 		public void Atualizar(UserDTO user)

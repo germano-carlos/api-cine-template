@@ -192,23 +192,4 @@ public class SessionTests
         var listarSessoes = _movieController.ListarSessoesFilme(criar.Movie.MovieId);
         Assert.True(listarSessoes.FirstOrDefault(s => s.MovieSessionId == criar.MovieSessionId && s.ActivityStatus == ActivityStatus.INACTIVE) is not null);
     }
-    
-    /*
-        
-        using var context = EasyCineContext.Get("Movie.CriarSessaoFilme"); 
-        //<#keep(CriarSessaoFilme)#> 
-
-        var movie = Movie.Get(movieSession.Movie.MovieId);
-        var sessao = Session.Get(movieSession.Session.SessionHour);
-        if (movie is null)
-            throw new Exception("Movie not found, try again with another values");
-        if (sessao is null)
-            throw new Exception("Session not found, try again with another values");
-			
-        var newSession = new MovieSession(movieSession, sessao, movie);
-        movie.MovieSessionList.Add(newSession);
-			
-        context.SaveChanges(); 
-        return MovieSessionDTO.FromEntity(newSession); 
-        //<#/keep(CriarSessaoFilme)#> */
 }

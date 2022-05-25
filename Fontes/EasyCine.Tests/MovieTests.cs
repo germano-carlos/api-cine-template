@@ -86,6 +86,7 @@ public class MovieTests
         
         var movieGet = _controller.ObterFilme(id);
         movie.CreatedAt = movieGet.CreatedAt;
+        movie.MovieSessionList = movieGet.MovieSessionList;
 
         var s_movie = JsonConvert.SerializeObject(movie);
         var s_movie_get = JsonConvert.SerializeObject(movieGet);

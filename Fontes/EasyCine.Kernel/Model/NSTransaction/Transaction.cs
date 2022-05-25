@@ -41,6 +41,11 @@ namespace EasyCine.Kernel.Model.NSTransaction
 			Card = Card.Get(transaction.Card.CardId);
 			MovieSession = MovieSession.Get(transaction.MovieSession.MovieSessionId);
 			ItemList = new List<Item>();
+
+			foreach (var item in transaction.ItemList)
+				new Item(item, this);
+
+			EasyCineContext.Get().TransactionSet.Add(this);
 		}
 		
 		public Transaction(TransactionDTO transaction, User usuario)
@@ -51,6 +56,11 @@ namespace EasyCine.Kernel.Model.NSTransaction
 			Card = Card.Get(transaction.Card.CardId);
 			MovieSession = MovieSession.Get(transaction.MovieSession.MovieSessionId);
 			ItemList = new List<Item>();
+			
+			foreach (var item in transaction.ItemList)
+				new Item(item, this);
+			
+			EasyCineContext.Get().TransactionSet.Add(this);
 		}
 
 		//<#/keep(constructor)#>
@@ -64,7 +74,11 @@ namespace EasyCine.Kernel.Model.NSTransaction
 		public static Transaction Get(long id)
 		{
 			//<#keep(delete)#>
-			return EasyCineContext.Get().TransactionSet.Find(id);
+			return EasyCineContext.Get().TransactionSet
+				.Include(s => s.Card)
+				.Include(s => s.User)
+				.Include(s => s.ItemList).Include(s => s.MovieSession)
+				.ThenInclude(s => s.Session).FirstOrDefault(s => s.TransactionId == id);
 			//<#/keep(delete)#>
 		}
 

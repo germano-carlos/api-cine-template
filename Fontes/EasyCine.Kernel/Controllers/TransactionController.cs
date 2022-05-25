@@ -37,12 +37,22 @@ namespace EasyCine.Kernel.Controllers
 			//<#/keep(CriarNovaTransacao)#> 
 		} 
 
-		public TransactionDTO[] ObterTransacoesUsuario(int usuarioId) 
+		public TransactionDTO[] ObterTransacoesUsuario(long usuarioId) 
 		{ 
 			using var context = EasyCineContext.Get("Transaction.ObterTransacoesUsuario"); 
 			//<#keep(ObterTransacoesUsuario)#> 
 			var t = Transaction.ObterTransacoesUsuario(usuarioId);
 			context.SaveChanges(); 
+
+			return TransactionDTO.FromEntity(t); 
+			//<#/keep(ObterTransacoesUsuario)#> 
+		} 
+		
+		public TransactionDTO ObterTransacao(long idTransacao) 
+		{ 
+			using var context = EasyCineContext.Get("Transaction.ObterTransacoesUsuario"); 
+			//<#keep(ObterTransacoesUsuario)#> 
+			var t = Transaction.Get(idTransacao);
 
 			return TransactionDTO.FromEntity(t); 
 			//<#/keep(ObterTransacoesUsuario)#> 
