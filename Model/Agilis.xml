@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<properties>
-	<DriverConStringUserPass_0>ConfirmaV2|||com.mysql.jdbc.Driver|||jdbc:mysql://echo-production.cs4qbnmj0lad.sa-east-1.rds.amazonaws.com:3306/|||guilherme.salles|||gsallesltda</DriverConStringUserPass_0>
-	<DriverConStringUserPass_1>ConfirmaV2|||com.mysql.jdbc.Driver|||jdbc:mysql://echo-production.cs4qbnmj0lad.sa-east-1.rds.amazonaws.com:3306/|||guilherme.salles|||gsallesltda</DriverConStringUserPass_1>
-</properties>
