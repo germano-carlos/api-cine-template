@@ -9,7 +9,7 @@ namespace EasyCine.Kernel.Util
 	public class Constantes
 	{
 		//<#keep(conteudo)#>
-		public static string ConnectionString = "server=localhost;port=3306;database=movie;uid=root;password=root;";
+		public static string ConnectionString = "server=localhost;port=3306;database=movie;uid=root;password=Wanted1232100;";
 		//<#/keep(conteudo)#>
 	}
 }
