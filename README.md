@@ -1,7 +1,7 @@
 
 # Api de Cinemas 
 
-O presente projeto é uma API simples e fictía para armazenamento e operações de filmes. Para trabalhos futuros poderá ser integrado a api de filmes para uma melhor massa de dados.
+O presente projeto é uma API simples e fictía para armazenamento e operações de filmes. Para trabalhos futuros poderá ser integrado a api de filmes para uma melhor massa de dados. Essa API utiliza o software XUnit para desenovlvimento de testes unitários em CSharp !
 
 # Instalação
 
@@ -51,3 +51,36 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 Maiores detalhes podem ser visto em: [Documentação Testes](https://docs.microsoft.com/pt-br/dotnet/core/testing/unit-testing-with-dotnet-test)
+
+# Casos de Testes
+
+Foram se criados **X** casos de testes de forma a cobrir **Y** entidades principais.
+Sendo as entidades
+
+- Movie: Entidade relacionada ao modelo Filmes;
+- Session: Entidade relacionada aos horários de sessões disponíveis;
+- MovieSession: Entidade relacionada ao relacionamento filme <> sessão;
+- MovieAttachment : Entidade relacionada ao relacionamento filme <> anexo;
+- MovieCategory: Entidade relacionada ao relacionamento filme <> categoria;
+- Card: Entidade relacionada ao modelo de cartões (forma de pagamento);
+- Item: Entidade relacionada ao modelo de itens de compra (bilhetes);
+- Transaction: Entidade relacionada as transações financeiras realizadas;
+- User: Entidade relacionada ao modelo Usuário;
+- Log: Entidade relacionada ao armzenamento de Logs.
+
+
+# Forma de Calculo (Cobertura)
+
+A cobertura dos testes foi realizada através do pacote: msbuild.coverlet
+
+```
+dotnet add package coverlet.msbuild
+```
+
+Além disso, também foi utilizado o **reportgenerator** para criação dos relatórios HTML para melhor visualização.
+
+```
+dotnet tool install -g dotnet-reportgenerator-globaltool
+```
+
+Maiores detalhes e forma de implementação: [Documentação Test Package](https://docs.microsoft.com/pt-br/dotnet/core/testing/unit-testing-code-coverage?tabs=windows)
