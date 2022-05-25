@@ -33,7 +33,7 @@ $ dotnet restore
 # Criando Projeto
 
 A criação de uma nova solução pode ser realizada pela própria IDE (Rider ou Visual Studio Code), ou se desejado realizar via dotnet cli, seguir a documentação:
-- [Documentação .NET Cli](https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-sln)
+- [Documentação .NET CLI](https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-sln)
 
 # Criando Novo Projeto de Testes
 
@@ -54,7 +54,7 @@ Maiores detalhes podem ser visto em: [Documentação Testes](https://docs.micros
 
 # Casos de Testes
 
-Foram se criados **X** casos de testes de forma a cobrir **Y** entidades principais.
+Foram se criados **22** casos de testes de forma a cobrir **5** entidades principais.
 Sendo as entidades
 
 - Movie: Entidade relacionada ao modelo Filmes;
@@ -69,7 +69,7 @@ Sendo as entidades
 - Log: Entidade relacionada ao armzenamento de Logs.
 
 
-# Forma de Calculo (Cobertura)
+# Forma de Cálculo (Cobertura)
 
 A cobertura dos testes foi realizada através do pacote: msbuild.coverlet
 
