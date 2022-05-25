@@ -33,11 +33,10 @@ namespace EasyCine.Kernel.DTO.NSUser
 				UserId = element.UserId,
 				Name = element.Name,
 				Email = element.Email,
-				Password = null,
+				Password = element.Password,
 				CreatedAt = element.CreatedAt,
 				UserType = element.UserType,
-				ActivityStatus = element.ActivityStatus,
-				CardList = CardDTO.FromEntity(element.CardList),
+				ActivityStatus = element.ActivityStatus
 			};
 		}
 		

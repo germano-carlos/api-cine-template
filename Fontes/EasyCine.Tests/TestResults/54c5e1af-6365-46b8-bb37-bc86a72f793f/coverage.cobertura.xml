@@ -1,51 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.1734" branch-rate="0.1666" version="1.9" timestamp="1653437012" lines-covered="124" lines-valid="715" branches-covered="13" branches-valid="78">
+<coverage line-rate="0.42710000000000004" branch-rate="0.2692" version="1.9" timestamp="1653449951" lines-covered="311" lines-valid="728" branches-covered="21" branches-valid="78">
   <sources>
-    <source>/Users/carlosgermano/Desktop/Desenvolvedor/Projetos/api-cine-template/Fontes/EasyCine.Kernel/</source>
+    <source>C:\www\pessoal\api-cine-template\Fontes\EasyCine.Kernel\</source>
   </sources>
   <packages>
-    <package name="EasyCine.Kernel" line-rate="0.1734" branch-rate="0.1666" complexity="252">
+    <package name="EasyCine.Kernel" line-rate="0.42710000000000004" branch-rate="0.2692" complexity="254">
       <classes>
-        <class name="EasyCine.Kernel.Util.Constantes" filename="Util/Constantes.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="EasyCine.Kernel.Util.Constantes" filename="Util\Constantes.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.EasyCineContext" filename="Model/EasyCineContext.cs" line-rate="0.6666" branch-rate="0.4375" complexity="32">
+        <class name="EasyCine.Kernel.Model.EasyCineContext" filename="Model\EasyCineContext.cs" line-rate="0.6666" branch-rate="0.5" complexity="32">
           <methods>
             <method name="Get" signature="()" line-rate="0.8" branch-rate="0.5" complexity="4">
               <lines>
-                <line number="25" hits="1" branch="False" />
-                <line number="26" hits="1" branch="True" condition-coverage="50% (2/4)">
+                <line number="25" hits="36" branch="False" />
+                <line number="26" hits="36" branch="True" condition-coverage="50% (2/4)">
                   <conditions>
                     <condition number="11" type="jump" coverage="50%" />
                     <condition number="31" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="27" hits="0" branch="False" />
-                <line number="28" hits="1" branch="False" />
-                <line number="29" hits="1" branch="False" />
+                <line number="28" hits="36" branch="False" />
+                <line number="29" hits="36" branch="False" />
               </lines>
             </method>
-            <method name="Get" signature="(System.String)" line-rate="0.8" branch-rate="0.5" complexity="4">
+            <method name="Get" signature="(System.String)" line-rate="0.8" branch-rate="0.75" complexity="4">
               <lines>
-                <line number="31" hits="1" branch="False" />
-                <line number="32" hits="1" branch="True" condition-coverage="50% (2/4)">
+                <line number="31" hits="34" branch="False" />
+                <line number="32" hits="34" branch="True" condition-coverage="75% (3/4)">
                   <conditions>
-                    <condition number="11" type="jump" coverage="50%" />
+                    <condition number="11" type="jump" coverage="100%" />
                     <condition number="31" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="33" hits="0" branch="False" />
-                <line number="34" hits="1" branch="False" />
-                <line number="35" hits="1" branch="False" />
+                <line number="34" hits="34" branch="False" />
+                <line number="35" hits="34" branch="False" />
               </lines>
             </method>
             <method name="Get" signature="(System.String,System.String)" line-rate="0" branch-rate="0" complexity="4">
@@ -64,65 +64,65 @@
             </method>
             <method name="get_MovieSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="43" hits="1" branch="False" />
+                <line number="43" hits="41" branch="False" />
               </lines>
             </method>
             <method name="get_MovieAttachmentSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="44" hits="1" branch="False" />
+                <line number="44" hits="34" branch="False" />
               </lines>
             </method>
             <method name="get_MovieSessionSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="1" branch="False" />
+                <line number="45" hits="34" branch="False" />
               </lines>
             </method>
             <method name="get_UserSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="46" hits="1" branch="False" />
+                <line number="46" hits="54" branch="False" />
               </lines>
             </method>
             <method name="get_TransactionSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="1" branch="False" />
+                <line number="47" hits="34" branch="False" />
               </lines>
             </method>
             <method name="get_CardSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="48" hits="1" branch="False" />
+                <line number="48" hits="41" branch="False" />
               </lines>
             </method>
             <method name="get_ItemSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="49" hits="1" branch="False" />
+                <line number="49" hits="34" branch="False" />
               </lines>
             </method>
             <method name="get_SessionSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="50" hits="1" branch="False" />
+                <line number="50" hits="34" branch="False" />
               </lines>
             </method>
             <method name="get_MovieCategorySet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="51" hits="2" branch="False" />
+                <line number="51" hits="36" branch="False" />
               </lines>
             </method>
             <method name="get_LogSet" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="52" hits="1" branch="False" />
+                <line number="52" hits="34" branch="False" />
               </lines>
             </method>
             <method name="OnConfiguring" signature="(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)" line-rate="0.3846" branch-rate="0.75" complexity="4">
               <lines>
-                <line number="63" hits="1" branch="False" />
-                <line number="64" hits="1" branch="True" condition-coverage="100% (2/2)">
+                <line number="63" hits="34" branch="False" />
+                <line number="64" hits="34" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="9" type="jump" coverage="100%" />
                   </conditions>
                 </line>
                 <line number="65" hits="0" branch="False" />
-                <line number="67" hits="1" branch="False" />
-                <line number="69" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="67" hits="34" branch="False" />
+                <line number="69" hits="34" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="33" type="jump" coverage="50%" />
                   </conditions>
@@ -134,7 +134,7 @@
                 <line number="74" hits="0" branch="False" />
                 <line number="75" hits="0" branch="False" />
                 <line number="76" hits="0" branch="False" />
-                <line number="77" hits="1" branch="False" />
+                <line number="77" hits="34" branch="False" />
               </lines>
             </method>
             <method name="OnModelCreating" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
@@ -145,24 +145,24 @@
             </method>
             <method name="SaveChanges" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="106" hits="1" branch="False" />
-                <line number="107" hits="1" branch="False" />
-                <line number="108" hits="1" branch="False" />
+                <line number="106" hits="14" branch="False" />
+                <line number="107" hits="14" branch="False" />
+                <line number="108" hits="14" branch="False" />
               </lines>
             </method>
             <method name="Dispose" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="110" hits="1" branch="False" />
-                <line number="111" hits="1" branch="False" />
-                <line number="112" hits="1" branch="False" />
-                <line number="114" hits="1" branch="False" />
+                <line number="110" hits="34" branch="False" />
+                <line number="111" hits="34" branch="False" />
+                <line number="112" hits="34" branch="False" />
+                <line number="114" hits="34" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="54" hits="1" branch="False" />
-                <line number="55" hits="1" branch="False" />
-                <line number="57" hits="1" branch="False" />
+                <line number="54" hits="34" branch="False" />
+                <line number="55" hits="34" branch="False" />
+                <line number="57" hits="34" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
@@ -179,26 +179,26 @@
             </method>
           </methods>
           <lines>
-            <line number="25" hits="1" branch="False" />
-            <line number="26" hits="1" branch="True" condition-coverage="50% (2/4)">
+            <line number="25" hits="36" branch="False" />
+            <line number="26" hits="36" branch="True" condition-coverage="50% (2/4)">
               <conditions>
                 <condition number="11" type="jump" coverage="50%" />
                 <condition number="31" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="27" hits="0" branch="False" />
-            <line number="28" hits="1" branch="False" />
-            <line number="29" hits="1" branch="False" />
-            <line number="31" hits="1" branch="False" />
-            <line number="32" hits="1" branch="True" condition-coverage="50% (2/4)">
+            <line number="28" hits="36" branch="False" />
+            <line number="29" hits="36" branch="False" />
+            <line number="31" hits="34" branch="False" />
+            <line number="32" hits="34" branch="True" condition-coverage="75% (3/4)">
               <conditions>
-                <condition number="11" type="jump" coverage="50%" />
+                <condition number="11" type="jump" coverage="100%" />
                 <condition number="31" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="33" hits="0" branch="False" />
-            <line number="34" hits="1" branch="False" />
-            <line number="35" hits="1" branch="False" />
+            <line number="34" hits="34" branch="False" />
+            <line number="35" hits="34" branch="False" />
             <line number="37" hits="0" branch="False" />
             <line number="38" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
@@ -209,25 +209,25 @@
             <line number="39" hits="0" branch="False" />
             <line number="40" hits="0" branch="False" />
             <line number="41" hits="0" branch="False" />
-            <line number="43" hits="1" branch="False" />
-            <line number="44" hits="1" branch="False" />
-            <line number="45" hits="1" branch="False" />
-            <line number="46" hits="1" branch="False" />
-            <line number="47" hits="1" branch="False" />
-            <line number="48" hits="1" branch="False" />
-            <line number="49" hits="1" branch="False" />
-            <line number="50" hits="1" branch="False" />
-            <line number="51" hits="2" branch="False" />
-            <line number="52" hits="1" branch="False" />
-            <line number="63" hits="1" branch="False" />
-            <line number="64" hits="1" branch="True" condition-coverage="100% (2/2)">
+            <line number="43" hits="41" branch="False" />
+            <line number="44" hits="34" branch="False" />
+            <line number="45" hits="34" branch="False" />
+            <line number="46" hits="54" branch="False" />
+            <line number="47" hits="34" branch="False" />
+            <line number="48" hits="41" branch="False" />
+            <line number="49" hits="34" branch="False" />
+            <line number="50" hits="34" branch="False" />
+            <line number="51" hits="36" branch="False" />
+            <line number="52" hits="34" branch="False" />
+            <line number="63" hits="34" branch="False" />
+            <line number="64" hits="34" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="9" type="jump" coverage="100%" />
               </conditions>
             </line>
             <line number="65" hits="0" branch="False" />
-            <line number="67" hits="1" branch="False" />
-            <line number="69" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="67" hits="34" branch="False" />
+            <line number="69" hits="34" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="33" type="jump" coverage="50%" />
               </conditions>
@@ -239,227 +239,231 @@
             <line number="74" hits="0" branch="False" />
             <line number="75" hits="0" branch="False" />
             <line number="76" hits="0" branch="False" />
-            <line number="77" hits="1" branch="False" />
+            <line number="77" hits="34" branch="False" />
             <line number="80" hits="1" branch="False" />
             <line number="104" hits="1" branch="False" />
-            <line number="106" hits="1" branch="False" />
-            <line number="107" hits="1" branch="False" />
-            <line number="108" hits="1" branch="False" />
-            <line number="110" hits="1" branch="False" />
-            <line number="111" hits="1" branch="False" />
-            <line number="112" hits="1" branch="False" />
-            <line number="114" hits="1" branch="False" />
-            <line number="54" hits="1" branch="False" />
-            <line number="55" hits="1" branch="False" />
-            <line number="57" hits="1" branch="False" />
+            <line number="106" hits="14" branch="False" />
+            <line number="107" hits="14" branch="False" />
+            <line number="108" hits="14" branch="False" />
+            <line number="110" hits="34" branch="False" />
+            <line number="111" hits="34" branch="False" />
+            <line number="112" hits="34" branch="False" />
+            <line number="114" hits="34" branch="False" />
+            <line number="54" hits="34" branch="False" />
+            <line number="55" hits="34" branch="False" />
+            <line number="57" hits="34" branch="False" />
             <line number="58" hits="0" branch="False" />
             <line number="59" hits="0" branch="False" />
             <line number="61" hits="0" branch="False" />
             <line number="23" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSUser.User" filename="Model/NSUser/User.cs" line-rate="0" branch-rate="0" complexity="19">
+        <class name="EasyCine.Kernel.Model.NSUser.User" filename="Model\NSUser\User.cs" line-rate="0.8604" branch-rate="0.5" complexity="19">
           <methods>
-            <method name="get_UserId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_UserId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="0" branch="False" />
+                <line number="21" hits="29" branch="False" />
               </lines>
             </method>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="False" />
+                <line number="22" hits="29" branch="False" />
               </lines>
             </method>
-            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="0" branch="False" />
+                <line number="23" hits="29" branch="False" />
               </lines>
             </method>
-            <method name="get_Password" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Password" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="False" />
+                <line number="24" hits="29" branch="False" />
               </lines>
             </method>
-            <method name="get_CreatedAt" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="0" branch="False" />
+                <line number="25" hits="33" branch="False" />
               </lines>
             </method>
-            <method name="get_UserType" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_UserType" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="0" branch="False" />
+                <line number="26" hits="29" branch="False" />
               </lines>
             </method>
-            <method name="get_ActivityStatus" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ActivityStatus" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
+                <line number="27" hits="35" branch="False" />
               </lines>
             </method>
-            <method name="get_CardList" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CardList" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="28" hits="0" branch="False" />
+                <line number="28" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_TransactionList" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_TransactionList" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="0" branch="False" />
+                <line number="29" hits="4" branch="False" />
               </lines>
             </method>
             <method name="Delete" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="48" hits="0" branch="False" />
                 <line number="50" hits="0" branch="False" />
                 <line number="52" hits="0" branch="False" />
+                <line number="54" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="Get" signature="(System.Int64)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Get" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="55" hits="0" branch="False" />
-                <line number="56" hits="0" branch="False" />
-                <line number="57" hits="0" branch="False" />
+                <line number="57" hits="16" branch="False" />
+                <line number="58" hits="16" branch="False" />
+                <line number="59" hits="16" branch="False" />
               </lines>
             </method>
-            <method name="Atualizar" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Atualizar" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="60" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="62" hits="0" branch="False" />
-                <line number="63" hits="0" branch="False" />
-                <line number="64" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
+                <line number="62" hits="7" branch="False" />
+                <line number="63" hits="7" branch="False" />
+                <line number="64" hits="7" branch="False" />
+                <line number="65" hits="7" branch="False" />
+                <line number="66" hits="7" branch="False" />
+                <line number="67" hits="7" branch="False" />
+                <line number="68" hits="7" branch="False" />
+                <line number="69" hits="7" branch="False" />
+                <line number="70" hits="7" branch="False" />
               </lines>
             </method>
-            <method name="Inativar" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="Inativar" signature="()" line-rate="0.8" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="12" type="jump" coverage="0%" />
+                    <condition number="12" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="73" hits="0" branch="False" />
                 <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="0" branch="False" />
+                <line number="31" hits="57" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="0" branch-rate="0" complexity="4">
+            <method name=".ctor" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="0.8461" branch-rate="0.5" complexity="4">
               <lines>
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="33" hits="4" branch="False" />
+                <line number="34" hits="4" branch="False" />
+                <line number="35" hits="4" branch="False" />
+                <line number="36" hits="4" branch="False" />
+                <line number="37" hits="4" branch="False" />
+                <line number="38" hits="4" branch="False" />
+                <line number="39" hits="4" branch="False" />
+                <line number="41" hits="12" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="74" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="131" type="jump" coverage="0%" />
+                    <condition number="98" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="42" hits="0" branch="False" />
+                <line number="43" hits="12" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="155" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
                 <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
+            <line number="21" hits="29" branch="False" />
+            <line number="22" hits="29" branch="False" />
+            <line number="23" hits="29" branch="False" />
+            <line number="24" hits="29" branch="False" />
+            <line number="25" hits="33" branch="False" />
+            <line number="26" hits="29" branch="False" />
+            <line number="27" hits="35" branch="False" />
+            <line number="28" hits="4" branch="False" />
+            <line number="29" hits="4" branch="False" />
             <line number="50" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
-            <line number="55" hits="0" branch="False" />
-            <line number="56" hits="0" branch="False" />
-            <line number="57" hits="0" branch="False" />
-            <line number="60" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="62" hits="0" branch="False" />
-            <line number="63" hits="0" branch="False" />
-            <line number="64" hits="0" branch="False" />
-            <line number="65" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="54" hits="0" branch="False" />
+            <line number="57" hits="16" branch="False" />
+            <line number="58" hits="16" branch="False" />
+            <line number="59" hits="16" branch="False" />
+            <line number="62" hits="7" branch="False" />
+            <line number="63" hits="7" branch="False" />
+            <line number="64" hits="7" branch="False" />
+            <line number="65" hits="7" branch="False" />
+            <line number="66" hits="7" branch="False" />
+            <line number="67" hits="7" branch="False" />
+            <line number="68" hits="7" branch="False" />
+            <line number="69" hits="7" branch="False" />
+            <line number="70" hits="7" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="12" type="jump" coverage="0%" />
+                <condition number="12" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="73" hits="0" branch="False" />
             <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="39" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="31" hits="57" branch="False" />
+            <line number="33" hits="4" branch="False" />
+            <line number="34" hits="4" branch="False" />
+            <line number="35" hits="4" branch="False" />
+            <line number="36" hits="4" branch="False" />
+            <line number="37" hits="4" branch="False" />
+            <line number="38" hits="4" branch="False" />
+            <line number="39" hits="4" branch="False" />
+            <line number="41" hits="12" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="74" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="131" type="jump" coverage="0%" />
+                <condition number="98" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="42" hits="0" branch="False" />
+            <line number="43" hits="12" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="155" type="jump" coverage="50%" />
+              </conditions>
+            </line>
             <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSTransaction.Card" filename="Model/NSTransaction/Card.cs" line-rate="0" branch-rate="0" complexity="16">
+        <class name="EasyCine.Kernel.Model.NSTransaction.Card" filename="Model\NSTransaction\Card.cs" line-rate="0.6666" branch-rate="0.5" complexity="17">
           <methods>
-            <method name="get_CardId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CardId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="0" branch="False" />
+                <line number="21" hits="5" branch="False" />
               </lines>
             </method>
-            <method name="get_HolderName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_HolderName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="False" />
+                <line number="22" hits="7" branch="False" />
               </lines>
             </method>
-            <method name="get_CardNumber" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CardNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="0" branch="False" />
+                <line number="23" hits="7" branch="False" />
               </lines>
             </method>
-            <method name="get_SecurityCode" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_SecurityCode" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="False" />
+                <line number="24" hits="7" branch="False" />
               </lines>
             </method>
-            <method name="get_ExpirationDate" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ExpirationDate" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="0" branch="False" />
+                <line number="25" hits="7" branch="False" />
               </lines>
             </method>
-            <method name="get_ActivityStatus" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ActivityStatus" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="0" branch="False" />
+                <line number="26" hits="9" branch="False" />
               </lines>
             </method>
             <method name="get_UserId" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -467,65 +471,72 @@
                 <line number="27" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="get_User" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_User" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="28" hits="0" branch="False" />
+                <line number="28" hits="7" branch="False" />
               </lines>
             </method>
-            <method name="get_TransactionList" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_TransactionList" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="0" branch="False" />
+                <line number="29" hits="2" branch="False" />
               </lines>
             </method>
             <method name="Delete" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="59" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="63" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="62" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="Get" signature="(System.Int64)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Get" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
               </lines>
             </method>
-            <method name="Inativar" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="Inativar" signature="()" line-rate="0.8" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="12" type="jump" coverage="0%" />
+                    <condition number="12" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="73" hits="0" branch="False" />
-                <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
+                <line number="74" hits="0" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Listar" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="0" branch="False" />
+                <line number="80" hits="4" branch="False" />
+                <line number="81" hits="4" branch="False" />
+                <line number="82" hits="4" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(EasyCine.Kernel.DTO.NSTransaction.CardDTO)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
+                <line number="31" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(EasyCine.Kernel.DTO.NSTransaction.CardDTO)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="2" branch="False" />
+                <line number="34" hits="2" branch="False" />
+                <line number="35" hits="2" branch="False" />
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="40" hits="2" branch="False" />
+                <line number="41" hits="2" branch="False" />
+                <line number="43" hits="2" branch="False" />
+                <line number="44" hits="2" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(EasyCine.Kernel.DTO.NSTransaction.CardDTO,EasyCine.Kernel.Model.NSUser.User)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="0" branch="False" />
                 <line number="46" hits="0" branch="False" />
                 <line number="47" hits="0" branch="False" />
                 <line number="48" hits="0" branch="False" />
@@ -533,48 +544,52 @@
                 <line number="50" hits="0" branch="False" />
                 <line number="51" hits="0" branch="False" />
                 <line number="52" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
                 <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
+            <line number="21" hits="5" branch="False" />
+            <line number="22" hits="7" branch="False" />
+            <line number="23" hits="7" branch="False" />
+            <line number="24" hits="7" branch="False" />
+            <line number="25" hits="7" branch="False" />
+            <line number="26" hits="9" branch="False" />
             <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="63" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="28" hits="7" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="62" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="12" type="jump" coverage="0%" />
+                <condition number="12" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="73" hits="0" branch="False" />
-            <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
+            <line number="74" hits="0" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="80" hits="4" branch="False" />
+            <line number="81" hits="4" branch="False" />
+            <line number="82" hits="4" branch="False" />
+            <line number="31" hits="12" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="34" hits="2" branch="False" />
+            <line number="35" hits="2" branch="False" />
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="40" hits="2" branch="False" />
+            <line number="41" hits="2" branch="False" />
+            <line number="43" hits="2" branch="False" />
+            <line number="44" hits="2" branch="False" />
             <line number="46" hits="0" branch="False" />
             <line number="47" hits="0" branch="False" />
             <line number="48" hits="0" branch="False" />
@@ -582,11 +597,12 @@
             <line number="50" hits="0" branch="False" />
             <line number="51" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
             <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSTransaction.Item" filename="Model/NSTransaction/Item.cs" line-rate="0" branch-rate="1" complexity="9">
+        <class name="EasyCine.Kernel.Model.NSTransaction.Item" filename="Model\NSTransaction\Item.cs" line-rate="0" branch-rate="1" complexity="9">
           <methods>
             <method name="get_ItemId" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -666,7 +682,7 @@
             <line number="38" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSTransaction.Transaction" filename="Model/NSTransaction/Transaction.cs" line-rate="0" branch-rate="0" complexity="18">
+        <class name="EasyCine.Kernel.Model.NSTransaction.Transaction" filename="Model\NSTransaction\Transaction.cs" line-rate="0" branch-rate="0" complexity="18">
           <methods>
             <method name="get_TransactionId" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -848,7 +864,7 @@
             <line number="54" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSSession.Session" filename="Model/NSSession/Session.cs" line-rate="0" branch-rate="1" complexity="8">
+        <class name="EasyCine.Kernel.Model.NSSession.Session" filename="Model\NSSession\Session.cs" line-rate="0" branch-rate="1" complexity="8">
           <methods>
             <method name="get_SessionId" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -922,154 +938,147 @@
             <line number="33" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSMovie.Movie" filename="Model/NSMovie/Movie.cs" line-rate="0.4507" branch-rate="0.4" complexity="26">
+        <class name="EasyCine.Kernel.Model.NSMovie.Movie" filename="Model\NSMovie\Movie.cs" line-rate="0.8823000000000001" branch-rate="0.5" complexity="25">
           <methods>
             <method name="get_MovieId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="1" branch="False" />
+                <line number="23" hits="33" branch="False" />
               </lines>
             </method>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="2" branch="False" />
+                <line number="24" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="2" branch="False" />
+                <line number="25" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_Rating" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="2" branch="False" />
+                <line number="26" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_CreatedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="2" branch="False" />
+                <line number="27" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_StartTime" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="28" hits="2" branch="False" />
+                <line number="28" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_EndTime" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="29" hits="2" branch="False" />
+                <line number="29" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_ActivityStatus" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="30" hits="3" branch="False" />
+                <line number="30" hits="39" branch="False" />
               </lines>
             </method>
             <method name="get_MovieAttachmentList" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="2" branch="False" />
+                <line number="31" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_MovieSessionList" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="2" branch="False" />
+                <line number="32" hits="36" branch="False" />
               </lines>
             </method>
             <method name="get_MovieCategoryList" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="33" hits="2" branch="False" />
+                <line number="33" hits="35" branch="False" />
               </lines>
             </method>
-            <method name="Delete" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Get" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="62" hits="0" branch="False" />
-                <line number="64" hits="0" branch="False" />
-                <line number="66" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="Get" signature="(System.Int64)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="70" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
+                <line number="64" hits="3" branch="False" />
+                <line number="65" hits="3" branch="False" />
+                <line number="66" hits="3" branch="False" />
+                <line number="67" hits="3" branch="False" />
+                <line number="68" hits="3" branch="False" />
+                <line number="69" hits="3" branch="False" />
+                <line number="70" hits="3" branch="False" />
+                <line number="71" hits="3" branch="False" />
               </lines>
             </method>
             <method name="Atualizar" signature="(EasyCine.Kernel.DTO.NSMovie.MovieDTO)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="80" hits="1" branch="False" />
-                <line number="81" hits="1" branch="False" />
-                <line number="82" hits="1" branch="False" />
-                <line number="83" hits="1" branch="False" />
-                <line number="84" hits="1" branch="False" />
-                <line number="85" hits="1" branch="False" />
-                <line number="86" hits="1" branch="False" />
-                <line number="87" hits="1" branch="False" />
+                <line number="74" hits="2" branch="False" />
+                <line number="75" hits="2" branch="False" />
+                <line number="76" hits="2" branch="False" />
+                <line number="77" hits="2" branch="False" />
+                <line number="78" hits="2" branch="False" />
+                <line number="79" hits="2" branch="False" />
+                <line number="80" hits="2" branch="False" />
+                <line number="81" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="Listar" signature="(System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,EasyCine.Kernel.Model.NSGeneric.ActivityStatus)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="Listar" signature="(System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,EasyCine.Kernel.Model.NSGeneric.ActivityStatus)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
-                <line number="93" hits="0" branch="False" />
-                <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
-                <line number="96" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="98" hits="0" branch="False" />
-                <line number="99" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
-                <line number="101" hits="0" branch="False" />
-                <line number="102" hits="0" branch="False" />
-                <line number="103" hits="0" branch="False" />
+                <line number="84" hits="4" branch="False" />
+                <line number="85" hits="4" branch="False" />
+                <line number="86" hits="4" branch="False" />
+                <line number="87" hits="4" branch="False" />
+                <line number="88" hits="4" branch="False" />
+                <line number="89" hits="4" branch="False" />
+                <line number="90" hits="4" branch="False" />
+                <line number="91" hits="4" branch="False" />
+                <line number="92" hits="4" branch="False" />
+                <line number="93" hits="4" branch="False" />
+                <line number="94" hits="4" branch="False" />
+                <line number="95" hits="4" branch="False" />
+                <line number="96" hits="4" branch="False" />
+                <line number="97" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="Inativar" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="Inativar" signature="()" line-rate="0.8332999999999999" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="106" hits="0" branch="False" />
-                <line number="107" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="12" type="jump" coverage="0%" />
+                    <condition number="12" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="108" hits="0" branch="False" />
-                <line number="110" hits="0" branch="False" />
-                <line number="111" hits="0" branch="False" />
-                <line number="112" hits="0" branch="False" />
+                <line number="102" hits="0" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="35" hits="0" branch="False" />
+                <line number="36" hits="96" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(EasyCine.Kernel.DTO.NSMovie.MovieDTO)" line-rate="0.65" branch-rate="0.5" complexity="8">
               <lines>
-                <line number="37" hits="1" branch="False" />
-                <line number="38" hits="1" branch="False" />
-                <line number="39" hits="1" branch="False" />
-                <line number="41" hits="1" branch="False" />
-                <line number="42" hits="1" branch="False" />
-                <line number="43" hits="1" branch="False" />
-                <line number="44" hits="1" branch="False" />
-                <line number="45" hits="1" branch="False" />
-                <line number="47" hits="3" branch="True" condition-coverage="50% (1/2)">
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="41" hits="2" branch="False" />
+                <line number="42" hits="2" branch="False" />
+                <line number="43" hits="2" branch="False" />
+                <line number="44" hits="2" branch="False" />
+                <line number="45" hits="2" branch="False" />
+                <line number="47" hits="6" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="110" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="48" hits="0" branch="False" />
-                <line number="49" hits="5" branch="True" condition-coverage="100% (2/2)">
+                <line number="49" hits="10" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="172" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="50" hits="1" branch="False" />
-                <line number="51" hits="3" branch="True" condition-coverage="50% (1/2)">
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="6" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="277" type="jump" coverage="50%" />
                   </conditions>
@@ -1084,87 +1093,84 @@
                 <line number="55" hits="0" branch="False" />
                 <line number="57" hits="0" branch="False" />
                 <line number="58" hits="0" branch="False" />
-                <line number="59" hits="1" branch="False" />
+                <line number="59" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="23" hits="1" branch="False" />
-            <line number="24" hits="2" branch="False" />
-            <line number="25" hits="2" branch="False" />
-            <line number="26" hits="2" branch="False" />
-            <line number="27" hits="2" branch="False" />
-            <line number="28" hits="2" branch="False" />
-            <line number="29" hits="2" branch="False" />
-            <line number="30" hits="3" branch="False" />
-            <line number="31" hits="2" branch="False" />
-            <line number="32" hits="2" branch="False" />
-            <line number="33" hits="2" branch="False" />
-            <line number="62" hits="0" branch="False" />
-            <line number="64" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
-            <line number="70" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
-            <line number="80" hits="1" branch="False" />
-            <line number="81" hits="1" branch="False" />
-            <line number="82" hits="1" branch="False" />
-            <line number="83" hits="1" branch="False" />
-            <line number="84" hits="1" branch="False" />
-            <line number="85" hits="1" branch="False" />
-            <line number="86" hits="1" branch="False" />
-            <line number="87" hits="1" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
-            <line number="93" hits="0" branch="False" />
-            <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
-            <line number="96" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="98" hits="0" branch="False" />
-            <line number="99" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
-            <line number="101" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
-            <line number="103" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="23" hits="33" branch="False" />
+            <line number="24" hits="35" branch="False" />
+            <line number="25" hits="35" branch="False" />
+            <line number="26" hits="35" branch="False" />
+            <line number="27" hits="35" branch="False" />
+            <line number="28" hits="35" branch="False" />
+            <line number="29" hits="35" branch="False" />
+            <line number="30" hits="39" branch="False" />
+            <line number="31" hits="35" branch="False" />
+            <line number="32" hits="36" branch="False" />
+            <line number="33" hits="35" branch="False" />
+            <line number="64" hits="3" branch="False" />
+            <line number="65" hits="3" branch="False" />
+            <line number="66" hits="3" branch="False" />
+            <line number="67" hits="3" branch="False" />
+            <line number="68" hits="3" branch="False" />
+            <line number="69" hits="3" branch="False" />
+            <line number="70" hits="3" branch="False" />
+            <line number="71" hits="3" branch="False" />
+            <line number="74" hits="2" branch="False" />
+            <line number="75" hits="2" branch="False" />
+            <line number="76" hits="2" branch="False" />
+            <line number="77" hits="2" branch="False" />
+            <line number="78" hits="2" branch="False" />
+            <line number="79" hits="2" branch="False" />
+            <line number="80" hits="2" branch="False" />
+            <line number="81" hits="2" branch="False" />
+            <line number="84" hits="4" branch="False" />
+            <line number="85" hits="4" branch="False" />
+            <line number="86" hits="4" branch="False" />
+            <line number="87" hits="4" branch="False" />
+            <line number="88" hits="4" branch="False" />
+            <line number="89" hits="4" branch="False" />
+            <line number="90" hits="4" branch="False" />
+            <line number="91" hits="4" branch="False" />
+            <line number="92" hits="4" branch="False" />
+            <line number="93" hits="4" branch="False" />
+            <line number="94" hits="4" branch="False" />
+            <line number="95" hits="4" branch="False" />
+            <line number="96" hits="4" branch="False" />
+            <line number="97" hits="4" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="12" type="jump" coverage="0%" />
+                <condition number="12" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="108" hits="0" branch="False" />
-            <line number="110" hits="0" branch="False" />
-            <line number="111" hits="0" branch="False" />
-            <line number="112" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="37" hits="1" branch="False" />
-            <line number="38" hits="1" branch="False" />
-            <line number="39" hits="1" branch="False" />
-            <line number="41" hits="1" branch="False" />
-            <line number="42" hits="1" branch="False" />
-            <line number="43" hits="1" branch="False" />
-            <line number="44" hits="1" branch="False" />
-            <line number="45" hits="1" branch="False" />
-            <line number="47" hits="3" branch="True" condition-coverage="50% (1/2)">
+            <line number="102" hits="0" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="36" hits="96" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="41" hits="2" branch="False" />
+            <line number="42" hits="2" branch="False" />
+            <line number="43" hits="2" branch="False" />
+            <line number="44" hits="2" branch="False" />
+            <line number="45" hits="2" branch="False" />
+            <line number="47" hits="6" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="110" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="48" hits="0" branch="False" />
-            <line number="49" hits="5" branch="True" condition-coverage="100% (2/2)">
+            <line number="49" hits="10" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="172" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="50" hits="1" branch="False" />
-            <line number="51" hits="3" branch="True" condition-coverage="50% (1/2)">
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="6" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="277" type="jump" coverage="50%" />
               </conditions>
@@ -1179,10 +1185,10 @@
             <line number="55" hits="0" branch="False" />
             <line number="57" hits="0" branch="False" />
             <line number="58" hits="0" branch="False" />
-            <line number="59" hits="1" branch="False" />
+            <line number="59" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSMovie.MovieAttachment" filename="Model/NSMovie/MovieAttachment.cs" line-rate="0" branch-rate="1" complexity="8">
+        <class name="EasyCine.Kernel.Model.NSMovie.MovieAttachment" filename="Model\NSMovie\MovieAttachment.cs" line-rate="0" branch-rate="1" complexity="8">
           <methods>
             <method name="get_MovieAttachmentId" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1252,16 +1258,16 @@
             <line number="35" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSMovie.MovieCategory" filename="Model/NSMovie/MovieCategory.cs" line-rate="0.6428" branch-rate="1" complexity="7">
+        <class name="EasyCine.Kernel.Model.NSMovie.MovieCategory" filename="Model\NSMovie\MovieCategory.cs" line-rate="0.7142000000000001" branch-rate="1" complexity="7">
           <methods>
             <method name="get_MovieCategoryId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="1" branch="False" />
+                <line number="19" hits="33" branch="False" />
               </lines>
             </method>
             <method name="get_Category" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="2" branch="False" />
+                <line number="20" hits="35" branch="False" />
               </lines>
             </method>
             <method name="get_id_movie" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1271,7 +1277,7 @@
             </method>
             <method name="get_Movie" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="1" branch="False" />
+                <line number="22" hits="2" branch="False" />
               </lines>
             </method>
             <method name="Delete" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1281,40 +1287,40 @@
                 <line number="39" hits="0" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="False" />
+                <line number="24" hits="96" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(EasyCine.Kernel.Model.NSMovie.Category,EasyCine.Kernel.Model.NSMovie.Movie)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="1" branch="False" />
-                <line number="27" hits="1" branch="False" />
-                <line number="28" hits="1" branch="False" />
-                <line number="29" hits="1" branch="False" />
-                <line number="31" hits="1" branch="False" />
-                <line number="32" hits="1" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="1" branch="False" />
-            <line number="20" hits="2" branch="False" />
+            <line number="19" hits="33" branch="False" />
+            <line number="20" hits="35" branch="False" />
             <line number="21" hits="0" branch="False" />
-            <line number="22" hits="1" branch="False" />
+            <line number="22" hits="2" branch="False" />
             <line number="35" hits="0" branch="False" />
             <line number="37" hits="0" branch="False" />
             <line number="39" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="26" hits="1" branch="False" />
-            <line number="27" hits="1" branch="False" />
-            <line number="28" hits="1" branch="False" />
-            <line number="29" hits="1" branch="False" />
-            <line number="31" hits="1" branch="False" />
-            <line number="32" hits="1" branch="False" />
+            <line number="24" hits="96" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSMovie.MovieSession" filename="Model/NSMovie/MovieSession.cs" line-rate="0" branch-rate="0" complexity="21">
+        <class name="EasyCine.Kernel.Model.NSMovie.MovieSession" filename="Model\NSMovie\MovieSession.cs" line-rate="0" branch-rate="0" complexity="21">
           <methods>
             <method name="get_MovieSessionId" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1476,7 +1482,7 @@
             <line number="41" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Model.NSGeneric.Log" filename="Model/NSGeneric/Log.cs" line-rate="0" branch-rate="1" complexity="8">
+        <class name="EasyCine.Kernel.Model.NSGeneric.Log" filename="Model\NSGeneric\Log.cs" line-rate="0" branch-rate="1" complexity="8">
           <methods>
             <method name="get_id_log" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -1548,133 +1554,133 @@
             <line number="34" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSUser.UserDTO" filename="DTO/NSUser/UserDTO.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="EasyCine.Kernel.DTO.NSUser.UserDTO" filename="DTO\NSUser\UserDTO.cs" line-rate="0.7894" branch-rate="0.5" complexity="4">
           <methods>
-            <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSUser.User)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSUser.User)" line-rate="0.9285" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="27" hits="22" branch="False" />
+                <line number="28" hits="22" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="7" type="jump" coverage="0%" />
+                    <condition number="7" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="29" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
+                <line number="31" hits="22" branch="False" />
+                <line number="32" hits="22" branch="False" />
+                <line number="33" hits="22" branch="False" />
+                <line number="34" hits="22" branch="False" />
+                <line number="35" hits="22" branch="False" />
+                <line number="36" hits="22" branch="False" />
+                <line number="37" hits="22" branch="False" />
+                <line number="38" hits="22" branch="False" />
+                <line number="39" hits="22" branch="False" />
+                <line number="40" hits="22" branch="False" />
+                <line number="41" hits="22" branch="False" />
               </lines>
             </method>
             <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSUser.User&gt;)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
+                <line number="44" hits="0" branch="False" />
                 <line number="45" hits="0" branch="False" />
                 <line number="46" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
+                <line number="22" hits="26" branch="False" />
+                <line number="23" hits="26" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="27" hits="22" branch="False" />
+            <line number="28" hits="22" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="7" type="jump" coverage="0%" />
+                <condition number="7" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="29" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
+            <line number="31" hits="22" branch="False" />
+            <line number="32" hits="22" branch="False" />
+            <line number="33" hits="22" branch="False" />
+            <line number="34" hits="22" branch="False" />
+            <line number="35" hits="22" branch="False" />
+            <line number="36" hits="22" branch="False" />
+            <line number="37" hits="22" branch="False" />
+            <line number="38" hits="22" branch="False" />
+            <line number="39" hits="22" branch="False" />
+            <line number="40" hits="22" branch="False" />
+            <line number="41" hits="22" branch="False" />
+            <line number="44" hits="0" branch="False" />
             <line number="45" hits="0" branch="False" />
             <line number="46" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
+            <line number="22" hits="26" branch="False" />
+            <line number="23" hits="26" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSTransaction.CardDTO" filename="DTO/NSTransaction/CardDTO.cs" line-rate="0" branch-rate="0" complexity="4">
+        <class name="EasyCine.Kernel.DTO.NSTransaction.CardDTO" filename="DTO\NSTransaction\CardDTO.cs" line-rate="0.9444" branch-rate="0.5" complexity="4">
           <methods>
-            <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSTransaction.Card)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSTransaction.Card)" line-rate="0.9285" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="27" hits="5" branch="False" />
+                <line number="28" hits="5" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="7" type="jump" coverage="0%" />
+                    <condition number="7" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="29" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
+                <line number="31" hits="5" branch="False" />
+                <line number="32" hits="5" branch="False" />
+                <line number="33" hits="5" branch="False" />
+                <line number="34" hits="5" branch="False" />
+                <line number="35" hits="5" branch="False" />
+                <line number="36" hits="5" branch="False" />
+                <line number="37" hits="5" branch="False" />
+                <line number="38" hits="5" branch="False" />
+                <line number="39" hits="5" branch="False" />
+                <line number="40" hits="5" branch="False" />
+                <line number="41" hits="5" branch="False" />
               </lines>
             </method>
-            <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSTransaction.Card&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSTransaction.Card&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="0" branch="False" />
+                <line number="23" hits="7" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="27" hits="5" branch="False" />
+            <line number="28" hits="5" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="7" type="jump" coverage="0%" />
+                <condition number="7" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="29" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
+            <line number="31" hits="5" branch="False" />
+            <line number="32" hits="5" branch="False" />
+            <line number="33" hits="5" branch="False" />
+            <line number="34" hits="5" branch="False" />
+            <line number="35" hits="5" branch="False" />
+            <line number="36" hits="5" branch="False" />
+            <line number="37" hits="5" branch="False" />
+            <line number="38" hits="5" branch="False" />
+            <line number="39" hits="5" branch="False" />
+            <line number="40" hits="5" branch="False" />
+            <line number="41" hits="5" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="23" hits="7" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSTransaction.ItemDTO" filename="DTO/NSTransaction/ItemDTO.cs" line-rate="0" branch-rate="0" complexity="3">
+        <class name="EasyCine.Kernel.DTO.NSTransaction.ItemDTO" filename="DTO\NSTransaction\ItemDTO.cs" line-rate="0" branch-rate="0" complexity="3">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSTransaction.Item)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -1724,7 +1730,7 @@
             <line number="38" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSTransaction.TransactionDTO" filename="DTO/NSTransaction/TransactionDTO.cs" line-rate="0" branch-rate="0" complexity="5">
+        <class name="EasyCine.Kernel.DTO.NSTransaction.TransactionDTO" filename="DTO\NSTransaction\TransactionDTO.cs" line-rate="0" branch-rate="0" complexity="5">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSTransaction.Transaction)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -1796,7 +1802,7 @@
             <line number="22" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSSession.SessionDTO" filename="DTO/NSSession/SessionDTO.cs" line-rate="0" branch-rate="0" complexity="3">
+        <class name="EasyCine.Kernel.DTO.NSSession.SessionDTO" filename="DTO\NSSession\SessionDTO.cs" line-rate="0" branch-rate="0" complexity="3">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSSession.Session)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -1846,7 +1852,7 @@
             <line number="40" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSMovie.MovieAttachmentDTO" filename="DTO/NSMovie/MovieAttachmentDTO.cs" line-rate="0.23070000000000002" branch-rate="0" complexity="3">
+        <class name="EasyCine.Kernel.DTO.NSMovie.MovieAttachmentDTO" filename="DTO\NSMovie\MovieAttachmentDTO.cs" line-rate="0.23070000000000002" branch-rate="0" complexity="3">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.MovieAttachment)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -1868,9 +1874,9 @@
             </method>
             <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSMovie.MovieAttachment&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="34" hits="1" branch="False" />
-                <line number="35" hits="1" branch="False" />
-                <line number="36" hits="1" branch="False" />
+                <line number="34" hits="33" branch="False" />
+                <line number="35" hits="33" branch="False" />
+                <line number="36" hits="33" branch="False" />
               </lines>
             </method>
           </methods>
@@ -1889,83 +1895,83 @@
             <line number="29" hits="0" branch="False" />
             <line number="30" hits="0" branch="False" />
             <line number="31" hits="0" branch="False" />
-            <line number="34" hits="1" branch="False" />
-            <line number="35" hits="1" branch="False" />
-            <line number="36" hits="1" branch="False" />
+            <line number="34" hits="33" branch="False" />
+            <line number="35" hits="33" branch="False" />
+            <line number="36" hits="33" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSMovie.MovieCategoryDTO" filename="DTO/NSMovie/MovieCategoryDTO.cs" line-rate="0.9166" branch-rate="0.5" complexity="3">
+        <class name="EasyCine.Kernel.DTO.NSMovie.MovieCategoryDTO" filename="DTO\NSMovie\MovieCategoryDTO.cs" line-rate="0.9166" branch-rate="0.5" complexity="3">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.MovieCategory)" line-rate="0.8887999999999999" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="20" hits="1" branch="False" />
-                <line number="21" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="20" hits="33" branch="False" />
+                <line number="21" hits="33" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="7" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="22" hits="0" branch="False" />
-                <line number="24" hits="1" branch="False" />
-                <line number="25" hits="1" branch="False" />
-                <line number="26" hits="1" branch="False" />
-                <line number="27" hits="1" branch="False" />
-                <line number="28" hits="1" branch="False" />
-                <line number="29" hits="1" branch="False" />
+                <line number="24" hits="33" branch="False" />
+                <line number="25" hits="33" branch="False" />
+                <line number="26" hits="33" branch="False" />
+                <line number="27" hits="33" branch="False" />
+                <line number="28" hits="33" branch="False" />
+                <line number="29" hits="33" branch="False" />
               </lines>
             </method>
             <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSMovie.MovieCategory&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="1" branch="False" />
-                <line number="33" hits="1" branch="False" />
-                <line number="34" hits="1" branch="False" />
+                <line number="32" hits="33" branch="False" />
+                <line number="33" hits="33" branch="False" />
+                <line number="34" hits="33" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="20" hits="1" branch="False" />
-            <line number="21" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="20" hits="33" branch="False" />
+            <line number="21" hits="33" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="7" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="22" hits="0" branch="False" />
-            <line number="24" hits="1" branch="False" />
-            <line number="25" hits="1" branch="False" />
-            <line number="26" hits="1" branch="False" />
-            <line number="27" hits="1" branch="False" />
-            <line number="28" hits="1" branch="False" />
-            <line number="29" hits="1" branch="False" />
-            <line number="32" hits="1" branch="False" />
-            <line number="33" hits="1" branch="False" />
-            <line number="34" hits="1" branch="False" />
+            <line number="24" hits="33" branch="False" />
+            <line number="25" hits="33" branch="False" />
+            <line number="26" hits="33" branch="False" />
+            <line number="27" hits="33" branch="False" />
+            <line number="28" hits="33" branch="False" />
+            <line number="29" hits="33" branch="False" />
+            <line number="32" hits="33" branch="False" />
+            <line number="33" hits="33" branch="False" />
+            <line number="34" hits="33" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSMovie.MovieDTO" filename="DTO/NSMovie/MovieDTO.cs" line-rate="0.7406999999999999" branch-rate="0.5" complexity="5">
+        <class name="EasyCine.Kernel.DTO.NSMovie.MovieDTO" filename="DTO\NSMovie\MovieDTO.cs" line-rate="0.8518000000000001" branch-rate="0.5" complexity="5">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.Movie)" line-rate="0.9444" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="29" hits="1" branch="False" />
-                <line number="30" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="29" hits="33" branch="False" />
+                <line number="30" hits="33" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="7" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="31" hits="0" branch="False" />
-                <line number="33" hits="1" branch="False" />
-                <line number="34" hits="1" branch="False" />
-                <line number="35" hits="1" branch="False" />
-                <line number="36" hits="1" branch="False" />
-                <line number="37" hits="1" branch="False" />
-                <line number="38" hits="1" branch="False" />
-                <line number="39" hits="1" branch="False" />
-                <line number="40" hits="1" branch="False" />
-                <line number="41" hits="1" branch="False" />
-                <line number="42" hits="1" branch="False" />
-                <line number="43" hits="1" branch="False" />
-                <line number="44" hits="1" branch="False" />
-                <line number="45" hits="1" branch="False" />
-                <line number="46" hits="1" branch="False" />
-                <line number="47" hits="1" branch="False" />
+                <line number="33" hits="33" branch="False" />
+                <line number="34" hits="33" branch="False" />
+                <line number="35" hits="33" branch="False" />
+                <line number="36" hits="33" branch="False" />
+                <line number="37" hits="33" branch="False" />
+                <line number="38" hits="33" branch="False" />
+                <line number="39" hits="33" branch="False" />
+                <line number="40" hits="33" branch="False" />
+                <line number="41" hits="33" branch="False" />
+                <line number="42" hits="33" branch="False" />
+                <line number="43" hits="33" branch="False" />
+                <line number="44" hits="33" branch="False" />
+                <line number="45" hits="33" branch="False" />
+                <line number="46" hits="33" branch="False" />
+                <line number="47" hits="33" branch="False" />
               </lines>
             </method>
             <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSMovie.Movie&gt;)" line-rate="0" branch-rate="1" complexity="1">
@@ -1975,56 +1981,56 @@
                 <line number="52" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.Movie[])" line-rate="0" branch-rate="1" complexity="1">
+            <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.Movie[])" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="55" hits="0" branch="False" />
-                <line number="56" hits="0" branch="False" />
-                <line number="57" hits="0" branch="False" />
+                <line number="55" hits="4" branch="False" />
+                <line number="56" hits="4" branch="False" />
+                <line number="57" hits="4" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="2" branch="False" />
-                <line number="24" hits="2" branch="False" />
-                <line number="25" hits="2" branch="False" />
+                <line number="23" hits="36" branch="False" />
+                <line number="24" hits="36" branch="False" />
+                <line number="25" hits="36" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="29" hits="1" branch="False" />
-            <line number="30" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="29" hits="33" branch="False" />
+            <line number="30" hits="33" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="7" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="31" hits="0" branch="False" />
-            <line number="33" hits="1" branch="False" />
-            <line number="34" hits="1" branch="False" />
-            <line number="35" hits="1" branch="False" />
-            <line number="36" hits="1" branch="False" />
-            <line number="37" hits="1" branch="False" />
-            <line number="38" hits="1" branch="False" />
-            <line number="39" hits="1" branch="False" />
-            <line number="40" hits="1" branch="False" />
-            <line number="41" hits="1" branch="False" />
-            <line number="42" hits="1" branch="False" />
-            <line number="43" hits="1" branch="False" />
-            <line number="44" hits="1" branch="False" />
-            <line number="45" hits="1" branch="False" />
-            <line number="46" hits="1" branch="False" />
-            <line number="47" hits="1" branch="False" />
+            <line number="33" hits="33" branch="False" />
+            <line number="34" hits="33" branch="False" />
+            <line number="35" hits="33" branch="False" />
+            <line number="36" hits="33" branch="False" />
+            <line number="37" hits="33" branch="False" />
+            <line number="38" hits="33" branch="False" />
+            <line number="39" hits="33" branch="False" />
+            <line number="40" hits="33" branch="False" />
+            <line number="41" hits="33" branch="False" />
+            <line number="42" hits="33" branch="False" />
+            <line number="43" hits="33" branch="False" />
+            <line number="44" hits="33" branch="False" />
+            <line number="45" hits="33" branch="False" />
+            <line number="46" hits="33" branch="False" />
+            <line number="47" hits="33" branch="False" />
             <line number="50" hits="0" branch="False" />
             <line number="51" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
-            <line number="55" hits="0" branch="False" />
-            <line number="56" hits="0" branch="False" />
-            <line number="57" hits="0" branch="False" />
-            <line number="23" hits="2" branch="False" />
-            <line number="24" hits="2" branch="False" />
-            <line number="25" hits="2" branch="False" />
+            <line number="55" hits="4" branch="False" />
+            <line number="56" hits="4" branch="False" />
+            <line number="57" hits="4" branch="False" />
+            <line number="23" hits="36" branch="False" />
+            <line number="24" hits="36" branch="False" />
+            <line number="25" hits="36" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.DTO.NSMovie.MovieSessionDTO" filename="DTO/NSMovie/MovieSessionDTO.cs" line-rate="0.15" branch-rate="0" complexity="5">
+        <class name="EasyCine.Kernel.DTO.NSMovie.MovieSessionDTO" filename="DTO\NSMovie\MovieSessionDTO.cs" line-rate="0.15" branch-rate="0" complexity="5">
           <methods>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.MovieSession)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -2049,9 +2055,9 @@
             </method>
             <method name="FromEntity" signature="(System.Collections.Generic.List`1&lt;EasyCine.Kernel.Model.NSMovie.MovieSession&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="43" hits="1" branch="False" />
-                <line number="44" hits="1" branch="False" />
-                <line number="45" hits="1" branch="False" />
+                <line number="43" hits="33" branch="False" />
+                <line number="44" hits="33" branch="False" />
+                <line number="45" hits="33" branch="False" />
               </lines>
             </method>
             <method name="FromEntity" signature="(EasyCine.Kernel.Model.NSMovie.MovieSession[])" line-rate="0" branch-rate="1" complexity="1">
@@ -2085,16 +2091,16 @@
             <line number="38" hits="0" branch="False" />
             <line number="39" hits="0" branch="False" />
             <line number="40" hits="0" branch="False" />
-            <line number="43" hits="1" branch="False" />
-            <line number="44" hits="1" branch="False" />
-            <line number="45" hits="1" branch="False" />
+            <line number="43" hits="33" branch="False" />
+            <line number="44" hits="33" branch="False" />
+            <line number="45" hits="33" branch="False" />
             <line number="48" hits="0" branch="False" />
             <line number="49" hits="0" branch="False" />
             <line number="50" hits="0" branch="False" />
             <line number="23" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.AuditoriaController" filename="Controllers/AuditoriaController.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="EasyCine.Kernel.Controllers.AuditoriaController" filename="Controllers\AuditoriaController.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
             <method name="createLOG" signature="(System.String,System.DateTime,System.String,EasyCine.Kernel.Model.NSGeneric.TypeLog)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2126,85 +2132,65 @@
             <line number="17" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.CardController" filename="Controllers/CardController.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="EasyCine.Kernel.Controllers.CardController" filename="Controllers\CardController.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
-            <method name="CriarCartao" signature="(EasyCine.Kernel.DTO.NSTransaction.CardDTO)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="CriarCartao" signature="(EasyCine.Kernel.DTO.NSTransaction.CardDTO)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
-                <line number="20" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
+                <line number="19" hits="2" branch="False" />
+                <line number="20" hits="2" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="23" hits="2" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="ExcluirCartao" signature="(System.Int64)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="ExcluirCartao" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="35" hits="2" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="ListarCartoes" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="0" branch="False" />
-                <line number="12" hits="0" branch="False" />
-                <line number="13" hits="0" branch="False" />
+                <line number="38" hits="4" branch="False" />
+                <line number="39" hits="4" branch="False" />
+                <line number="41" hits="4" branch="False" />
+                <line number="43" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="5" branch="False" />
+                <line number="14" hits="5" branch="False" />
+                <line number="15" hits="5" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="13" hits="0" branch="False" />
+            <line number="19" hits="2" branch="False" />
+            <line number="20" hits="2" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="23" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="35" hits="2" branch="False" />
+            <line number="38" hits="4" branch="False" />
+            <line number="39" hits="4" branch="False" />
+            <line number="41" hits="4" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="13" hits="5" branch="False" />
+            <line number="14" hits="5" branch="False" />
+            <line number="15" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.ItemController" filename="Controllers/ItemController.cs" line-rate="0" branch-rate="1" complexity="2">
-          <methods>
-            <method name="FuncaoTeste" signature="(System.Int32,System.String)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="15" hits="0" branch="False" />
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="9" hits="0" branch="False" />
-                <line number="10" hits="0" branch="False" />
-                <line number="11" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
-            <line number="10" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="EasyCine.Kernel.Controllers.MovieAttachmentController" filename="Controllers/MovieAttachmentController.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="EasyCine.Kernel.Controllers.ItemController" filename="Controllers\ItemController.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
             <method name="FuncaoTeste" signature="(System.Int32,System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2236,7 +2222,39 @@
             <line number="11" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.MovieController" filename="Controllers/MovieController.cs" line-rate="0.1232" branch-rate="0" complexity="21">
+        <class name="EasyCine.Kernel.Controllers.MovieAttachmentController" filename="Controllers\MovieAttachmentController.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="FuncaoTeste" signature="(System.Int32,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="EasyCine.Kernel.Controllers.MovieController" filename="Controllers\MovieController.cs" line-rate="0.2857" branch-rate="0" complexity="22">
           <methods>
             <method name="AtualizarFilme" signature="(EasyCine.Kernel.DTO.NSMovie.MovieDTO)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2275,112 +2293,120 @@
             </method>
             <method name="CriarFilme" signature="(EasyCine.Kernel.DTO.NSMovie.MovieDTO)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="57" hits="1" branch="False" />
-                <line number="58" hits="1" branch="False" />
-                <line number="60" hits="1" branch="False" />
-                <line number="61" hits="1" branch="False" />
-                <line number="63" hits="1" branch="False" />
-                <line number="65" hits="1" branch="False" />
+                <line number="57" hits="2" branch="False" />
+                <line number="58" hits="2" branch="False" />
+                <line number="60" hits="2" branch="False" />
+                <line number="61" hits="2" branch="False" />
+                <line number="63" hits="2" branch="False" />
+                <line number="65" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="ObterFilme" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="68" hits="2" branch="False" />
+                <line number="69" hits="2" branch="False" />
+                <line number="71" hits="2" branch="False" />
+                <line number="73" hits="2" branch="False" />
               </lines>
             </method>
             <method name="CriarSessao" signature="(EasyCine.Kernel.DTO.NSSession.SessionDTO)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="68" hits="0" branch="False" />
-                <line number="69" hits="0" branch="False" />
-                <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="76" hits="0" branch="False" />
+                <line number="77" hits="0" branch="False" />
+                <line number="80" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="28" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="73" hits="0" branch="False" />
-                <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
-                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+                <line number="83" hits="0" branch="False" />
+                <line number="84" hits="0" branch="False" />
+                <line number="86" hits="0" branch="False" />
+                <line number="88" hits="0" branch="False" />
               </lines>
             </method>
             <method name="CriarSessaoFilme" signature="(EasyCine.Kernel.DTO.NSMovie.MovieSessionDTO)" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="83" hits="0" branch="False" />
-                <line number="84" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="91" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="54" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="98" hits="0" branch="False" />
+                <line number="99" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="75" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="92" hits="0" branch="False" />
-                <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="98" hits="0" branch="False" />
                 <line number="100" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="ListarFilmes" signature="(System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,EasyCine.Kernel.Model.NSGeneric.ActivityStatus)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
+                <line number="102" hits="0" branch="False" />
                 <line number="103" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
+                <line number="105" hits="0" branch="False" />
                 <line number="106" hits="0" branch="False" />
                 <line number="108" hits="0" branch="False" />
               </lines>
             </method>
+            <method name="ListarFilmes" signature="(System.String,System.String,System.String,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,System.Nullable`1&lt;System.DateTime&gt;,EasyCine.Kernel.Model.NSGeneric.ActivityStatus)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="111" hits="4" branch="False" />
+                <line number="112" hits="4" branch="False" />
+                <line number="114" hits="4" branch="False" />
+                <line number="116" hits="4" branch="False" />
+              </lines>
+            </method>
             <method name="ListarSessoesFilme" signature="(System.Int32)" line-rate="0" branch-rate="0" complexity="2">
               <lines>
-                <line number="111" hits="0" branch="False" />
-                <line number="112" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
-                <line number="116" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="119" hits="0" branch="False" />
+                <line number="120" hits="0" branch="False" />
+                <line number="123" hits="0" branch="False" />
+                <line number="124" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="26" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="117" hits="0" branch="False" />
-                <line number="119" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="127" hits="0" branch="False" />
+                <line number="129" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="RemoverFilme" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="RemoverFilme" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="124" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
-                <line number="128" hits="0" branch="False" />
-                <line number="130" hits="0" branch="False" />
-                <line number="132" hits="0" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="133" hits="1" branch="False" />
+                <line number="136" hits="1" branch="False" />
+                <line number="138" hits="1" branch="False" />
+                <line number="140" hits="2" branch="False" />
               </lines>
             </method>
             <method name="RemoverSessaoFilme" signature="(System.Int32)" line-rate="0" branch-rate="0" complexity="4">
               <lines>
-                <line number="135" hits="0" branch="False" />
-                <line number="136" hits="0" branch="False" />
-                <line number="138" hits="0" branch="False" />
-                <line number="139" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="143" hits="0" branch="False" />
+                <line number="144" hits="0" branch="False" />
+                <line number="146" hits="0" branch="False" />
+                <line number="147" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="44" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="140" hits="0" branch="False" />
-                <line number="142" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="148" hits="0" branch="False" />
+                <line number="150" hits="0" branch="True" condition-coverage="0% (0/2)">
                   <conditions>
                     <condition number="81" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="143" hits="0" branch="False" />
-                <line number="145" hits="0" branch="False" />
+                <line number="151" hits="0" branch="False" />
+                <line number="153" hits="0" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="4" branch="False" />
-                <line number="19" hits="4" branch="False" />
-                <line number="20" hits="4" branch="False" />
+                <line number="18" hits="7" branch="False" />
+                <line number="19" hits="7" branch="False" />
+                <line number="20" hits="7" branch="False" />
               </lines>
             </method>
           </methods>
@@ -2412,87 +2438,91 @@
             <line number="50" hits="0" branch="False" />
             <line number="52" hits="0" branch="False" />
             <line number="54" hits="0" branch="False" />
-            <line number="57" hits="1" branch="False" />
-            <line number="58" hits="1" branch="False" />
-            <line number="60" hits="1" branch="False" />
-            <line number="61" hits="1" branch="False" />
-            <line number="63" hits="1" branch="False" />
-            <line number="65" hits="1" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="69" hits="0" branch="False" />
-            <line number="72" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="57" hits="2" branch="False" />
+            <line number="58" hits="2" branch="False" />
+            <line number="60" hits="2" branch="False" />
+            <line number="61" hits="2" branch="False" />
+            <line number="63" hits="2" branch="False" />
+            <line number="65" hits="2" branch="False" />
+            <line number="68" hits="2" branch="False" />
+            <line number="69" hits="2" branch="False" />
+            <line number="71" hits="2" branch="False" />
+            <line number="73" hits="2" branch="False" />
+            <line number="76" hits="0" branch="False" />
+            <line number="77" hits="0" branch="False" />
+            <line number="80" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="28" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="73" hits="0" branch="False" />
-            <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
-            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
             <line number="83" hits="0" branch="False" />
             <line number="84" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
+            <line number="86" hits="0" branch="False" />
             <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="91" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="54" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="98" hits="0" branch="False" />
+            <line number="99" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="75" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="92" hits="0" branch="False" />
-            <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="98" hits="0" branch="False" />
             <line number="100" hits="0" branch="False" />
+            <line number="102" hits="0" branch="False" />
             <line number="103" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
+            <line number="105" hits="0" branch="False" />
             <line number="106" hits="0" branch="False" />
             <line number="108" hits="0" branch="False" />
-            <line number="111" hits="0" branch="False" />
-            <line number="112" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
-            <line number="116" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="111" hits="4" branch="False" />
+            <line number="112" hits="4" branch="False" />
+            <line number="114" hits="4" branch="False" />
+            <line number="116" hits="4" branch="False" />
+            <line number="119" hits="0" branch="False" />
+            <line number="120" hits="0" branch="False" />
+            <line number="123" hits="0" branch="False" />
+            <line number="124" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="26" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="117" hits="0" branch="False" />
-            <line number="119" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
-            <line number="124" hits="0" branch="False" />
             <line number="125" hits="0" branch="False" />
-            <line number="128" hits="0" branch="False" />
-            <line number="130" hits="0" branch="False" />
-            <line number="132" hits="0" branch="False" />
-            <line number="135" hits="0" branch="False" />
-            <line number="136" hits="0" branch="False" />
-            <line number="138" hits="0" branch="False" />
-            <line number="139" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="127" hits="0" branch="False" />
+            <line number="129" hits="0" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="133" hits="1" branch="False" />
+            <line number="136" hits="1" branch="False" />
+            <line number="138" hits="1" branch="False" />
+            <line number="140" hits="2" branch="False" />
+            <line number="143" hits="0" branch="False" />
+            <line number="144" hits="0" branch="False" />
+            <line number="146" hits="0" branch="False" />
+            <line number="147" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="44" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="140" hits="0" branch="False" />
-            <line number="142" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="148" hits="0" branch="False" />
+            <line number="150" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
                 <condition number="81" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="143" hits="0" branch="False" />
-            <line number="145" hits="0" branch="False" />
-            <line number="18" hits="4" branch="False" />
-            <line number="19" hits="4" branch="False" />
-            <line number="20" hits="4" branch="False" />
+            <line number="151" hits="0" branch="False" />
+            <line number="153" hits="0" branch="False" />
+            <line number="18" hits="7" branch="False" />
+            <line number="19" hits="7" branch="False" />
+            <line number="20" hits="7" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.MovieSessionController" filename="Controllers/MovieSessionController.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="EasyCine.Kernel.Controllers.MovieSessionController" filename="Controllers\MovieSessionController.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
             <method name="FuncaoTeste" signature="(System.Int32,System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2524,7 +2554,7 @@
             <line number="11" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.OperacaoController" filename="Controllers/OperacaoController.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="EasyCine.Kernel.Controllers.OperacaoController" filename="Controllers\OperacaoController.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2540,7 +2570,7 @@
             <line number="26" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.SessionController" filename="Controllers/SessionController.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="EasyCine.Kernel.Controllers.SessionController" filename="Controllers\SessionController.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
             <method name="FuncaoTeste" signature="(System.Int32,System.String)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2572,7 +2602,7 @@
             <line number="11" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.TransactionController" filename="Controllers/TransactionController.cs" line-rate="0" branch-rate="1" complexity="4">
+        <class name="EasyCine.Kernel.Controllers.TransactionController" filename="Controllers\TransactionController.cs" line-rate="0" branch-rate="1" complexity="4">
           <methods>
             <method name="AtualizarTransacoes" signature="(EasyCine.Kernel.DTO.NSTransaction.TransactionDTO)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2638,76 +2668,80 @@
             <line number="13" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="EasyCine.Kernel.Controllers.UserController" filename="Controllers/UserController.cs" line-rate="0" branch-rate="1" complexity="5">
+        <class name="EasyCine.Kernel.Controllers.UserController" filename="Controllers\UserController.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
-            <method name="AtualizarUsuario" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="AtualizarUsuario" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
+                <line number="18" hits="3" branch="False" />
+                <line number="19" hits="3" branch="False" />
+                <line number="21" hits="3" branch="False" />
+                <line number="22" hits="3" branch="False" />
+                <line number="23" hits="3" branch="False" />
+                <line number="25" hits="3" branch="False" />
+                <line number="27" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="CriarUsuario" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="CriarUsuario" signature="(EasyCine.Kernel.DTO.NSUser.UserDTO)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="33" hits="4" branch="False" />
+                <line number="34" hits="4" branch="False" />
+                <line number="36" hits="4" branch="False" />
+                <line number="38" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="ExcluirUsuario" signature="(System.Int64)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="ExcluirUsuario" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="47" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="ObterUsuario" signature="(System.Int64)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="ObterUsuario" signature="(System.Int64)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
-                <line number="52" hits="0" branch="False" />
+                <line number="50" hits="10" branch="False" />
+                <line number="51" hits="10" branch="False" />
+                <line number="53" hits="10" branch="False" />
+                <line number="55" hits="10" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="0" branch="False" />
-                <line number="13" hits="0" branch="False" />
-                <line number="14" hits="0" branch="False" />
+                <line number="12" hits="10" branch="False" />
+                <line number="13" hits="10" branch="False" />
+                <line number="14" hits="10" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="18" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
-            <line number="52" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
+            <line number="18" hits="3" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="21" hits="3" branch="False" />
+            <line number="22" hits="3" branch="False" />
+            <line number="23" hits="3" branch="False" />
+            <line number="25" hits="3" branch="False" />
+            <line number="27" hits="3" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="33" hits="4" branch="False" />
+            <line number="34" hits="4" branch="False" />
+            <line number="36" hits="4" branch="False" />
+            <line number="38" hits="4" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="47" hits="2" branch="False" />
+            <line number="50" hits="10" branch="False" />
+            <line number="51" hits="10" branch="False" />
+            <line number="53" hits="10" branch="False" />
+            <line number="55" hits="10" branch="False" />
+            <line number="12" hits="10" branch="False" />
+            <line number="13" hits="10" branch="False" />
+            <line number="14" hits="10" branch="False" />
           </lines>
         </class>
       </classes>

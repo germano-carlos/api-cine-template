@@ -18,8 +18,11 @@ namespace EasyCine.Kernel.Controllers
 		{ 
 			using var context = EasyCineContext.Get("User.AtualizarUsuario"); 
 			//<#keep(AtualizarUsuario)#> 
+			var u = User.Get(user.UserId);
+			u.Atualizar(user);
 			context.SaveChanges(); 
-			return null; 
+
+			return UserDTO.FromEntity(u); 
 			//<#/keep(AtualizarUsuario)#> 
 		} 
 

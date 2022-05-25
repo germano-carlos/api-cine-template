@@ -63,6 +63,14 @@ namespace EasyCine.Kernel.Controllers
 			return MovieDTO.FromEntity(movieCriado); 
 			//<#/keep(CriarFilme)#> 
 		} 
+		
+		public MovieDTO ObterFilme(long movieId) 
+		{ 
+			using var context = EasyCineContext.Get("Movie.CriarFilme"); 
+			//<#keep(CriarFilme)#> 
+			return MovieDTO.FromEntity(Movie.Get(movieId)); 
+			//<#/keep(CriarFilme)#> 
+		} 
 
 		public SessionDTO CriarSessao(SessionDTO sessao) 
 		{ 
@@ -120,7 +128,7 @@ namespace EasyCine.Kernel.Controllers
 			//<#/keep(ListarSessoesFilme)#> 
 		} 
 
-		public void RemoverFilme(int movieId) 
+		public void RemoverFilme(long movieId) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.RemoverFilme"); 
 			//<#keep(RemoverFilme)#> 

@@ -38,6 +38,7 @@ namespace EasyCine.Kernel.Model.NSTransaction
 			ExpirationDate = cartao.ExpirationDate;
 			ActivityStatus = ActivityStatus.ACTIVE;
 			User = NSUser.User.Get(cartao.User.UserId);
+			TransactionList = new List<Transaction>();
 
 			EasyCineContext.Get().CardSet.Add(this);
 		}
@@ -73,6 +74,11 @@ namespace EasyCine.Kernel.Model.NSTransaction
 				throw new Exception("Card Already Inactive");
 
 			ActivityStatus = ActivityStatus.INACTIVE;
+		}
+
+		public static List<Card> Listar(long usuarioId)
+		{
+			return EasyCineContext.Get().CardSet.Where(u => u.User.UserId == usuarioId).Include(u => u.User).ToList();
 		}
 		//<#/keep(implements)#>
 	}

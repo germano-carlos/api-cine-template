@@ -35,7 +35,8 @@ namespace EasyCine.Kernel.DTO.NSTransaction
 				CardNumber = element.CardNumber,
 				SecurityCode = element.SecurityCode,
 				ExpirationDate = element.ExpirationDate,
-				ActivityStatus = element.ActivityStatus
+				ActivityStatus = element.ActivityStatus,
+				User = UserDTO.FromEntity(element.User)
 			};
 		}
 		

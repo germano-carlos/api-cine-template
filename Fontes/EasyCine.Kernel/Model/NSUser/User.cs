@@ -35,6 +35,8 @@ namespace EasyCine.Kernel.Model.NSUser
 			Atualizar(usuario);
 			CreatedAt = DateTime.Now;
 			ActivityStatus = ActivityStatus.ACTIVE;
+			CardList = new List<Card>();
+			TransactionList = new List<Transaction>();
 
 			foreach (var card in usuario.CardList)
 				new Card(card, this);

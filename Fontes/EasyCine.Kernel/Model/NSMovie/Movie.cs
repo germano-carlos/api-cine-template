@@ -32,8 +32,8 @@ namespace EasyCine.Kernel.Model.NSMovie
 		[InverseProperty("Movie")] public List<MovieSession> MovieSessionList { get; set; }  // ICollection 
 		[InverseProperty("Movie")] public List<MovieCategory> MovieCategoryList { get; set; }  // ICollection 
 
-		public Movie() { }
 		//<#keep(constructor)#>
+		public Movie() { }
 		public Movie(MovieDTO movieP)
 		{
 			Atualizar(movieP);
@@ -58,20 +58,14 @@ namespace EasyCine.Kernel.Model.NSMovie
 		    }
 		}
 		//<#/keep(constructor)#>
-		internal void Delete()
-		{
-			//<#keep(delete)#>
-			EasyCineContext.Get().MovieSet.Remove(this);
-			//<#/keep(delete)#>
-		}
 
 		//<#keep(implements)#>
 		public static Movie Get(long movieId)
 		{
 			return (from m in EasyCineContext.Get().MovieSet
-					.Include(m => m.MovieSessionList).ThenInclude(m => m.Session)
-					.Include(m => m.MovieAttachmentList)
-					.Include(m => m.MovieCategoryList).ThenInclude(m => m.Category)
+					.Include(m => m.MovieSessionList).ThenInclude(mm => mm.Session)
+					.Include(mmm => mmm.MovieAttachmentList)
+					.Include(mmmm => mmmm.MovieCategoryList)
 				where m.MovieId == movieId
 				select m).FirstOrDefault();
 		}
@@ -91,7 +85,7 @@ namespace EasyCine.Kernel.Model.NSMovie
 			return (from m in EasyCineContext.Get().MovieSet
 						.Include(m => m.MovieSessionList).ThenInclude(m => m.Session)
 						.Include(m => m.MovieAttachmentList)
-						.Include(m => m.MovieCategoryList).ThenInclude(m => m.Category)
+						.Include(m => m.MovieCategoryList)
 					where (string.IsNullOrWhiteSpace(name) || m.Name.Contains(name)) &&
 					      (string.IsNullOrWhiteSpace(description) || m.Description.Contains(description)) &&
 					      (string.IsNullOrWhiteSpace(rating) || m.Rating.Contains(rating)) &&
