@@ -34,8 +34,7 @@ namespace EasyCine.Kernel.DTO.NSMovie
 				Amount = element.Amount, 
 				ActivityStatus = element.ActivityStatus, 
 				SessionType = element.SessionType,
-				Session = SessionDTO.FromEntity(element.Session), 
-				TransactionList = TransactionDTO.FromEntity(element.TransactionList)
+				Session = SessionDTO.FromEntity(element.Session)
 			};
 		}
 		

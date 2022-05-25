@@ -115,7 +115,7 @@ namespace EasyCine.Kernel.Controllers
 			//<#/keep(ListarFilmes)#> 
 		} 
 
-		public MovieSessionDTO[] ListarSessoesFilme(int movieId) 
+		public MovieSessionDTO[] ListarSessoesFilme(long movieId) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.ListarSessoesFilme"); 
 			//<#keep(ListarSessoesFilme)#> 
@@ -139,15 +139,16 @@ namespace EasyCine.Kernel.Controllers
 			//<#/keep(RemoverFilme)#> 
 		} 
 
-		public void RemoverSessaoFilme(int movieSessionId) 
+		public void RemoverSessaoFilme(long movieSessionId) 
 		{ 
 			using var context = EasyCineContext.Get("Movie.RemoverSessaoFilme"); 
 			//<#keep(RemoverSessaoFilme)#> 
-			var movieGet = Movie.Get(movieSessionId);
+			
+			var movieGet = MovieSession.Get(movieSessionId);
 			if (movieGet is null)
 				throw new Exception("Movie not found, try again with another values");
 			
-			movieGet.MovieSessionList.FirstOrDefault(m => m.MovieSessionId == movieSessionId)?.Inativar();
+			movieGet.Inativar();
 			context.SaveChanges(); 
 			//<#/keep(RemoverSessaoFilme)#> 
 		} 

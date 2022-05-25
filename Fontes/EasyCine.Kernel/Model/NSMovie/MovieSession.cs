@@ -53,13 +53,13 @@ namespace EasyCine.Kernel.Model.NSMovie
 			ActivityStatus = movieSession.ActivityStatus;
 			SessionType = movieSession.SessionType;
 
-			if (movieSession.Session != null || movieSession.Movie != null)
+			if (this.Session != null || this.Movie != null)
 				throw new Exception("It is not possibile to do this operation, please create another movie to do this !");
 		}
 
 		public static MovieSession Get(long id)
 		{
-			return EasyCineContext.Get().MovieSessionSet.Find(id);
+			return EasyCineContext.Get().MovieSessionSet.Include(s => s.TransactionList).FirstOrDefault(s => s.MovieSessionId == id);
 		}
 
 		public void Inativar()

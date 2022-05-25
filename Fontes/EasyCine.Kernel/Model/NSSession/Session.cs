@@ -30,6 +30,8 @@ namespace EasyCine.Kernel.Model.NSSession
 			SessionHour = sessao.SessionHour;
 			CreatedAt = DateTime.Now;
 			ActivityStatus = ActivityStatus.ACTIVE;
+
+			EasyCineContext.Get().SessionSet.Add(this);
 		}
 		//<#/keep(constructor)#>
 		internal void Delete()
