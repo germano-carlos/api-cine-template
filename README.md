@@ -54,7 +54,7 @@ Maiores detalhes podem ser visto em: [Documentação Testes](https://docs.micros
 
 # Casos de Testes
 
-Foram se criados **22** casos de testes de forma a cobrir **5** entidades principais.
+Foram se criados **41** casos de testes de forma a cobrir **5** entidades principais.
 Sendo as entidades
 
 - Movie: Entidade relacionada ao modelo Filmes;
